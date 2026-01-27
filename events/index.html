@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Events - Serenity Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="brand">Serenity Events</div>
+            <div class="nav-links">
+                <a href="#" class="active">Discover</a>
+                <a href="#">Concerts</a>
+                <a href="#">Arts</a>
+                <a href="#">Workshops</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-outline">My Tickets</a>
+                <a href="#" class="btn btn-primary">Sign In</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Find Your Next Experience</h1>
+            <p>Curated events for the thoughtful soul.</p>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search events, artists, or venues...">
+            </div>
+        </section>
+
+        <section class="content">
+            <div class="filters">
+                <button class="filter-pill active">All</button>
+                <button class="filter-pill">Music</button>
+                <button class="filter-pill">Art & Design</button>
+                <button class="filter-pill">Wellness</button>
+                <button class="filter-pill">Food & Drink</button>
+                <button class="filter-pill">Tech</button>
+            </div>
+
+            <div class="event-grid">
+                <!-- Event Card 1 -->
+                <article class="event-card" onclick="window.location.href='event.html'">
+                    <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
+                        alt="Concert" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">Sat, Feb 14 • 8:00 PM</div>
+                        <h3 class="event-title">Jazz Under the Stars</h3>
+                        <div class="event-location">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Skyline Rooftop Garden
+                        </div>
+                        <div class="event-price">$45.00</div>
+                    </div>
+                </article>
+
+                <!-- Event Card 2 -->
+                <article class="event-card" onclick="window.location.href='event.html'">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1742&q=80"
+                        alt="Art Exhibition" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">Sun, Feb 22 • 10:00 AM</div>
+                        <h3 class="event-title">Minimalist Design Expo</h3>
+                        <div class="event-location">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Modern Art Gallery
+                        </div>
+                        <div class="event-price">$20.00</div>
+                    </div>
+                </article>
+
+                <!-- Event Card 3 -->
+                <article class="event-card" onclick="window.location.href='event.html'">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                        alt="Yoga" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">Sat, Mar 01 • 9:00 AM</div>
+                        <h3 class="event-title">Sunrise Yoga & Meditation</h3>
+                        <div class="event-location">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Central Park Meadow
+                        </div>
+                        <div class="event-price">$15.00</div>
+                    </div>
+                </article>
+
+                <!-- Event Card 4 -->
+                <article class="event-card" onclick="window.location.href='event.html'">
+                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?ixlib=rb-4.0.3&auto=format&fit=crop&w=1769&q=80"
+                        alt="Public Speaking" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">Thu, Mar 15 • 6:30 PM</div>
+                        <h3 class="event-title">The Art of Storytelling</h3>
+                        <div class="event-location">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            The Writers' Loft
+                        </div>
+                        <div class="event-price">$30.00</div>
+                    </div>
+                </article>
+            </div>
+            <div class="pagination">
+                <button disabled>Previous</button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <span class="dots">...</span>
+                <button>Next</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Serenity Events. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item active">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+            <span>Discover</span>
+        </a>
+        <a href="#" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Search</span>
+        </a>
+        <a href="#" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+                <polyline points="13 2 13 9 20 9"></polyline>
+            </svg>
+            <span>Tickets</span>
+        </a>
+        <a href="#" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Profile</span>
+        </a>
+    </nav>
+</body>
+
+</html>

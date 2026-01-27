@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="articles.html">Articles</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="brand">Serenity</div>
+            <div class="nav-right">
+                <a href="newsletter.html">Newsletter</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Featured Articles -->
+        <section class="featured-section">
+            <h2 class="section-title">Featured Stories</h2>
+            <div class="featured-grid">
+                <article class="featured-article">
+                    <div class="article-meta">
+                        <span>Design</span>
+                        <span>•</span>
+                        <span>8 min read</span>
+                    </div>
+                    <h2>The Art of Minimalism in Modern Web Design</h2>
+                    <p>Exploring how less can truly be more when it comes to creating impactful digital experiences. We
+                        delve into the philosophy behind minimalist design and its profound effect on user engagement.
+                    </p>
+                    <a href="#" class="read-more">Continue reading</a>
+                </article>
+
+                <article class="featured-article">
+                    <div class="article-meta">
+                        <span>Technology</span>
+                        <span>•</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h2>Understanding Color Spaces: The Future with OKLCH</h2>
+                    <p>A deep dive into the new OKLCH color format and why it represents a significant leap forward for
+                        designers and developers working with color on the web.</p>
+                    <a href="#" class="read-more">Continue reading</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- All Articles -->
+        <section class="articles-section">
+            <h2 class="section-title">Recent Articles</h2>
+            <div class="articles-list">
+                <article class="article-item">
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span>Creativity</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>Finding Inspiration in Everyday Moments</h3>
+                        <p>How to cultivate a creative mindset by paying attention to the small details that surround us
+                            daily.</p>
+                    </div>
+                    <div class="article-date">Jan 25, 2026</div>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span>Typography</span>
+                            <span>•</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3>The Psychology of Font Pairing</h3>
+                        <p>Understanding how different typefaces work together to create harmony and hierarchy in
+                            design.</p>
+                    </div>
+                    <div class="article-date">Jan 22, 2026</div>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span>Productivity</span>
+                            <span>•</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3>Building Better Habits Through Intentional Practice</h3>
+                        <p>A practical guide to establishing routines that stick and help you achieve your long-term
+                            goals.</p>
+                    </div>
+                    <div class="article-date">Jan 20, 2026</div>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span>Design</span>
+                            <span>•</span>
+                            <span>6 min read</span>
+                        </div>
+                        <h3>White Space: The Unsung Hero of Design</h3>
+                        <p>Why embracing emptiness in your layouts can lead to more powerful and effective designs.</p>
+                    </div>
+                    <div class="article-date">Jan 18, 2026</div>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span>Writing</span>
+                            <span>•</span>
+                            <span>9 min read</span>
+                        </div>
+                        <h3>The Power of Simplicity in Communication</h3>
+                        <p>Learning to convey complex ideas with clarity and precision through deliberate word choice.
+                        </p>
+                    </div>
+                    <div class="article-date">Jan 15, 2026</div>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span>Philosophy</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h3>Slow Living in a Fast-Paced World</h3>
+                        <p>Rediscovering the value of patience and presence in an age of constant connectivity.</p>
+                    </div>
+                    <div class="article-date">Jan 13, 2026</div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button disabled>Previous</button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <span class="dots">...</span>
+                <button>8</button>
+                <button>Next</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-brand">Serenity</div>
+                <p class="footer-description">
+                    A minimalist space for thoughtful writing and meaningful conversations.
+                    Exploring design, creativity, and the art of living intentionally.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <div class="footer-links">
+                    <a href="#articles">All Articles</a>
+                    <a href="#categories">Categories</a>
+                    <a href="#archives">Archives</a>
+                    <a href="#about">About</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <div class="footer-links">
+                    <a href="#newsletter">Newsletter</a>
+                    <a href="#twitter">Twitter</a>
+                    <a href="#instagram">Instagram</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Serenity. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="articles.html" class="mobile-nav-item active">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+            <span>Articles</span>
+        </a>
+        <a href="about.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>About</span>
+        </a>
+        <a href="newsletter.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>News</span>
+        </a>
+        <a href="contact.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+            </svg>
+            <span>Contact</span>
+        </a>
+    </nav>
+
+</body>
+
+</html>

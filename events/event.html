@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jazz Under the Stars - Serenity Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="brand">Serenity Events</div>
+            <div class="nav-links">
+                <a href="index.html">Discover</a>
+                <a href="#">Concerts</a>
+                <a href="#">Arts</a>
+                <a href="#">Workshops</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn btn-outline">My Tickets</a>
+                <a href="#" class="btn btn-primary">Sign In</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="event-hero">
+        <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80"
+            alt="Jazz Concert" class="event-hero-bg">
+        <div class="event-hero-overlay"></div>
+        <div class="event-hero-content">
+            <div class="event-hero-date">Sat, Feb 14 • 8:00 PM</div>
+            <h1>Jazz Under the Stars</h1>
+            <div class="event-hero-location">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Skyline Rooftop Garden, New York
+            </div>
+        </div>
+    </div>
+
+    <main style="padding-top: 0;">
+        <div class="event-layout">
+            <div class="event-description">
+                <h2>About the Event</h2>
+                <p>Join us for an unforgettable evening of smooth jazz and breathtaking city views. "Jazz Under the
+                    Stars" features the renowned Quartet Noir performing a special set of classic standards and original
+                    compositions.</p>
+                <p>Located at the exclusive Skyline Rooftop Garden, you'll enjoy a curated selection of cocktails and
+                    hors d'oeuvres while soaking in the ambiance of the city lights. Perfect for a romantic Valentine's
+                    date or a sophisticated night out with friends.</p>
+                <p>Doors open at 7:00 PM. Performance begins at 8:00 PM. Semi-formal attire tailored to the weather is
+                    recommended.</p>
+
+                <h2>Lineup</h2>
+                <ul>
+                    <li><strong>Quartet Noir</strong> (Headliner)</li>
+                    <li>Sarah Vaughn Tribute Trio (Opener)</li>
+                </ul>
+
+                <h2>Venue Details</h2>
+                <p>The Skyline Rooftop Garden offers panoramic views of the entire city. It is fully accessible via
+                    elevator. In case of rain, the event will be moved to the glass-enclosed atrium.</p>
+            </div>
+
+            <div class="event-sidebar">
+                <div class="ticket-card">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem;">Select Tickets</h3>
+
+                    <div class="ticket-list">
+                        <!-- Early Bird -->
+                        <div class="ticket-row">
+                            <div class="ticket-info">
+                                <h4>Early Bird</h4>
+                                <p>Limited availability</p>
+                            </div>
+                            <div class="ticket-pricing">
+                                <span class="price-tag">$35.00</span>
+                                <div class="qty-control">
+                                    <button class="qty-btn" disabled>-</button>
+                                    <span class="qty-val">0</span>
+                                    <button class="qty-btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- General Admission -->
+                        <div class="ticket-row">
+                            <div class="ticket-info">
+                                <h4>General Admission</h4>
+                                <p>Standard entry</p>
+                            </div>
+                            <div class="ticket-pricing">
+                                <span class="price-tag">$45.00</span>
+                                <div class="qty-control">
+                                    <button class="qty-btn">-</button>
+                                    <span class="qty-val">1</span>
+                                    <button class="qty-btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VIP -->
+                        <div class="ticket-row">
+                            <div class="ticket-info">
+                                <h4>VIP Experience</h4>
+                                <p>Priority seating + 1 drink</p>
+                            </div>
+                            <div class="ticket-pricing">
+                                <span class="price-tag">$120.00</span>
+                                <div class="qty-control">
+                                    <button class="qty-btn">-</button>
+                                    <span class="qty-val">0</span>
+                                    <button class="qty-btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ticket-summary">
+                        <span>Total (1 Ticket)</span>
+                        <span>$45.00</span>
+                    </div>
+
+                    <a href="checkout.html" class="btn btn-primary btn-full">Checkout</a>
+                    <p style="text-align: center; font-size: 0.8rem; margin-top: 1rem; color: var(--text-tertiary);">
+                        Secure checkout powered by Serenity</p>
+                </div>
+
+                <!-- Event Meta moved below ticket card or kept inside if preferred. 
+                     Let's keep it separate or below for cleaner flow if list is long.
+                     For now, I'll put it below the card in a cleaner layout or just keep it simple.
+                     Actually, standard is often to have meta info clearly visible. 
+                     I'll add it back below the checkout button or in a separate small box if space permits.
+                     Let's put it back inside purely for visual containment as per previous design.
+                -->
+                <div style="margin-top: 2rem; padding: 0 1rem;">
+                    <div class="event-meta-item">
+                        <div class="event-meta-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <div class="event-meta-content">
+                            <h4>Date & Time</h4>
+                            <p>Sat, Feb 14, 2026<br>8:00 PM - 11:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="event-meta-item">
+                        <div class="event-meta-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="event-meta-content">
+                            <h4>Location</h4>
+                            <p>Skyline Rooftop Garden<br>123 Highrise Ave, NY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Serenity Events. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Action Bar -->
+    <div class="mobile-action-bar">
+        <div class="mobile-price">
+            <span class="mobile-price-val">From $35.00</span>
+            <span class="mobile-price-label">Tickets available</span>
+        </div>
+        <a href="#tickets" class="btn btn-primary">Select Tickets</a>
+    </div>
+
+</body>
+
+</html>
