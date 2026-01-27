@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Management - Hotel Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            Azure Sands <span class="admin-badge">Admin</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="guests.html" class="active">Guests</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+        <div class="user-profile">
+            <div class="avatar"></div>
+            <span>Manager</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div>
+                <h1 class="page-title">Guests</h1>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Customer database and
+                    history</p>
+            </div>
+            <button class="btn btn-secondary">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
+                </svg>
+                Export CSV
+            </button>
+        </div>
+
+        <div class="form-card" style="margin-bottom: 2rem;">
+            <div class="form-group" style="margin-bottom: 0;">
+                <input type="text" class="form-input" placeholder="Search guests by name, email, or phone number...">
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Guest</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Visits</th>
+                        <th>Total Spend</th>
+                        <th>Last Visit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <div
+                                    style="width: 32px; height: 32px; background: var(--border-color); border-radius: 50%;">
+                                </div>
+                                <span style="font-weight: 500;">David Wilson</span>
+                            </div>
+                        </td>
+                        <td>david.w@example.com</td>
+                        <td>+1 555-0123</td>
+                        <td>3</td>
+                        <td style="font-weight: 600;">$2,450.00</td>
+                        <td>Oct 20, 2025</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <div
+                                    style="width: 32px; height: 32px; background: var(--border-color); border-radius: 50%;">
+                                </div>
+                                <span style="font-weight: 500;">Anna Bell</span>
+                            </div>
+                        </td>
+                        <td>anna.b@example.com</td>
+                        <td>+1 555-0199</td>
+                        <td>1</td>
+                        <td style="font-weight: 600;">$0.00</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                <div
+                                    style="width: 32px; height: 32px; background: var(--border-color); border-radius: 50%;">
+                                </div>
+                                <span style="font-weight: 500;">John Doe</span>
+                            </div>
+                        </td>
+                        <td>john.doe@example.com</td>
+                        <td>+1 555-0001</td>
+                        <td>5</td>
+                        <td style="font-weight: 600;">$4,100.00</td>
+                        <td>Sep 15, 2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button disabled>Previous</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>Next</button>
+        </div>
+    </main>
+
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            Dashboard
+        </a>
+        <a href="rooms.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+            Rooms
+        </a>
+        <a href="bookings.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Bookings
+        </a>
+        <a href="settings.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Settings
+        </a>
+    </div>
+</body>
+
+</html>

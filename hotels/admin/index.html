@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Admin - Azure Sands</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            Azure Sands <span class="admin-badge">Admin</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="bookings.html">Bookings</a>
+            <a href="guests.html">Guests</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+        <div class="user-profile">
+            <div class="avatar"></div>
+            <span>Manager</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div>
+                <h1 class="page-title">Dashboard</h1>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">Daily overview of hotel
+                    operations</p>
+            </div>
+            <a href="create-booking.html" class="btn btn-primary">
+                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+                New Reservation
+            </a>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Daily Revenue</div>
+                <div class="stat-value">$4,250</div>
+                <div class="stat-trend trend-up">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        style="display:inline; vertical-align:text-bottom;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                    +8% vs yesterday
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Occupancy Rate</div>
+                <div class="stat-value">84%</div>
+                <div class="stat-trend trend-up">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        style="display:inline; vertical-align:text-bottom;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                    21 rooms occupied
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">New Bookings</div>
+                <div class="stat-value">12</div>
+                <div class="stat-trend">
+                    <span style="color: var(--text-tertiary);">Checking in today</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Pending Requests</div>
+                <div class="stat-value">3</div>
+                <div class="stat-trend trend-down">
+                    <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        style="display:inline; vertical-align:text-bottom;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                    Requires action
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 3rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h3>Recent Bookings</h3>
+                <a href="bookings.html" style="color: var(--accent); font-size: 0.9rem; font-weight: 500;">View All</a>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Guest</th>
+                            <th>Room</th>
+                            <th>Check In</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <div
+                                        style="width: 32px; height: 32px; background: var(--border-color); border-radius: 50%;">
+                                    </div>
+                                    <span style="font-weight: 500;">John Doe</span>
+                                </div>
+                            </td>
+                            <td>Ocean View Suite (104)</td>
+                            <td>Oct 26, 2025</td>
+                            <td><span class="status status-confirmed">Confirmed</span></td>
+                            <td style="font-weight: 600;">$750.00</td>
+                            <td><button class="btn-secondary"
+                                    style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <div
+                                        style="width: 32px; height: 32px; background: var(--border-color); border-radius: 50%;">
+                                    </div>
+                                    <span style="font-weight: 500;">Sarah Smith</span>
+                                </div>
+                            </td>
+                            <td>Garden Villa (201)</td>
+                            <td>Oct 27, 2025</td>
+                            <td><span class="status status-pending">Pending</span></td>
+                            <td style="font-weight: 600;">$520.00</td>
+                            <td><button class="btn-secondary"
+                                    style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                                    <div
+                                        style="width: 32px; height: 32px; background: var(--border-color); border-radius: 50%;">
+                                    </div>
+                                    <span style="font-weight: 500;">Mike Johnson</span>
+                                </div>
+                            </td>
+                            <td>Deluxe King (305)</td>
+                            <td>Oct 25, 2025</td>
+                            <td><span class="status status-confirmed">Checked In</span></td>
+                            <td style="font-weight: 600;">$250.00</td>
+                            <td><button class="btn-secondary"
+                                    style="padding: 0.4rem 0.8rem; font-size: 0.8rem;">Details</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item active">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            Dashboard
+        </a>
+        <a href="rooms.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+            Rooms
+        </a>
+        <a href="bookings.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Bookings
+        </a>
+        <a href="settings.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Settings
+        </a>
+    </div>
+</body>
+
+</html>
