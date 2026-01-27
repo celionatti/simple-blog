@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Serenity Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">Serenity <span
+                style="font-family: 'Inter', sans-serif; font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; color: var(--text-primary); margin-left: 0.5rem; font-weight: 400;">Shop</span>
+        </div>
+        <nav class="nav-links">
+            <a href="cart.html">Return to Cart</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cart-layout">
+            <div class="checkout-form">
+                <h2 style="margin-bottom: 2rem;">Shipping Details</h2>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <input type="text" class="form-input" placeholder="First Name">
+                    <input type="text" class="form-input" placeholder="Last Name">
+                </div>
+
+                <input type="email" class="form-input" placeholder="Email Address">
+                <input type="text" class="form-input" placeholder="Address">
+                <input type="text" class="form-input" placeholder="Apartment, suite, etc. (optional)">
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem;">
+                    <input type="text" class="form-input" placeholder="City">
+                    <select class="form-input" style="background: white;">
+                        <option>State</option>
+                        <option>NY</option>
+                        <option>CA</option>
+                    </select>
+                    <input type="text" class="form-input" placeholder="ZIP Code">
+                </div>
+
+                <h2 style="margin-bottom: 2rem; margin-top: 2rem;">Payment</h2>
+
+                <div
+                    style="border: 1px solid var(--border-color); border-radius: 4px; padding: 1rem; margin-bottom: 1rem; background: var(--bg-card);">
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                        </svg>
+                        Credit Card
+                    </div>
+                    <input type="text" class="form-input" placeholder="Card Number" style="margin-bottom: 1rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <input type="text" class="form-input" placeholder="MM / YY" style="margin-bottom: 0;">
+                        <input type="text" class="form-input" placeholder="CVC" style="margin-bottom: 0;">
+                    </div>
+                </div>
+
+                <a href="confirmation.html" class="btn btn-primary btn-full"
+                    style="padding: 1rem; margin-top: 1rem;">Pay $1,295.00</a>
+            </div>
+
+            <div class="cart-summary Order Summary" style="height: fit-content; background: var(--bg-secondary);">
+                <div class="summary-row" style="margin-bottom: 1.5rem; align-items: center;">
+                    <img src="https://images.unsplash.com/photo-1540932296774-3ed6d53eb423?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+                        style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;">
+                    <div style="flex: 1; margin-left: 1rem;">
+                        <p style="font-weight: 500; font-size: 0.9rem;">Organic Linen Sofa</p>
+                        <p style="color: var(--text-secondary); font-size: 0.8rem;">Oatmeal</p>
+                    </div>
+                    <span style="font-size: 0.9rem;">$1,250.00</span>
+                </div>
+
+                <div class="summary-row" style="margin-bottom: 1.5rem; align-items: center;">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                        style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;">
+                    <div style="flex: 1; margin-left: 1rem;">
+                        <p style="font-weight: 500; font-size: 0.9rem;">Ceramic Vase</p>
+                        <p style="color: var(--text-secondary); font-size: 0.8rem;">Matte White</p>
+                    </div>
+                    <span style="font-size: 0.9rem;">$45.00</span>
+                </div>
+
+                <div style="border-top: 1px solid var(--border-color); margin: 1rem 0;"></div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>$1,295.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>$1,295.00</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
