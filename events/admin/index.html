@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Serenity Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">Serenity <span class="admin-badge">Admin</span></div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="events.html">Events</a>
+            <a href="#">Orders</a>
+            <a href="profile.html">Settings</a>
+        </nav>
+        <a href="profile.html" class="user-profile" style="text-decoration: none; color: inherit;">
+            <span>Jane Doe</span>
+            <div class="avatar"></div>
+        </a>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">Overview</h1>
+            <div class="date-range" style="color: var(--text-tertiary); font-size: 0.9rem;">
+                Last 30 Days
+            </div>
+        </div>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">Total Revenue</div>
+                <div class="stat-value">$12,450</div>
+                <div class="stat-trend trend-up">↑ 12% vs last month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Tickets Sold</div>
+                <div class="stat-value">342</div>
+                <div class="stat-trend trend-up">↑ 5% vs last month</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Active Events</div>
+                <div class="stat-value">4</div>
+                <div class="stat-trend">2 draft events</div>
+            </div>
+        </section>
+
+        <section class="activity-section">
+            <h2 style="margin-bottom: 1.5rem; font-size: 1.2rem;">Recent Activity</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Event</th>
+                            <th>Amount</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#2931</td>
+                            <td>Alex M.</td>
+                            <td>Jazz Under the Stars</td>
+                            <td>$90.00</td>
+                            <td>2 mins ago</td>
+                        </tr>
+                        <tr>
+                            <td>#2930</td>
+                            <td>Sarah J.</td>
+                            <td>Minimalist Design Expo</td>
+                            <td>$20.00</td>
+                            <td>15 mins ago</td>
+                        </tr>
+                        <tr>
+                            <td>#2929</td>
+                            <td>Mike T.</td>
+                            <td>Sunrise Yoga</td>
+                            <td>$15.00</td>
+                            <td>1 hour ago</td>
+                        </tr>
+                        <tr>
+                            <td>#2928</td>
+                            <td>Emily R.</td>
+                            <td>Jazz Under the Stars</td>
+                            <td>$135.00</td>
+                            <td>2 hours ago</td>
+                        </tr>
+                        <tr>
+                            <td>#2927</td>
+                            <td>David K.</td>
+                            <td>The Art of Storytelling</td>
+                            <td>$30.00</td>
+                            <td>3 hours ago</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item active">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>Home</span>
+        </a>
+        <a href="events.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            <span>Events</span>
+        </a>
+        <a href="create-event.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <span>Add</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Profile</span>
+        </a>
+    </nav>
+</body>
+
+</html>

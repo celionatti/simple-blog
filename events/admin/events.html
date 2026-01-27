@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Serenity Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">Serenity <span class="admin-badge">Admin</span></div>
+        <nav class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="events.html" class="active">Events</a>
+            <a href="#">Orders</a>
+            <a href="profile.html">Settings</a>
+        </nav>
+        <a href="profile.html" class="user-profile" style="text-decoration: none; color: inherit;">
+            <span>Jane Doe</span>
+            <div class="avatar"></div>
+        </a>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">Events</h1>
+            <a href="create-event.html" class="btn btn-primary">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Create Event
+            </a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Tickets Sold</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: 500; color: var(--text-primary);">Jazz Under the Stars</td>
+                        <td>Feb 14, 2026</td>
+                        <td>Skyline Rooftop</td>
+                        <td>124 / 200</td>
+                        <td><span class="status status-active">Active</span></td>
+                        <td><a href="#" style="color: var(--accent);">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 500; color: var(--text-primary);">Minimalist Design Expo</td>
+                        <td>Feb 22, 2026</td>
+                        <td>Modern Art Gallery</td>
+                        <td>85 / 150</td>
+                        <td><span class="status status-active">Active</span></td>
+                        <td><a href="#" style="color: var(--accent);">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 500; color: var(--text-primary);">Sunrise Yoga Class</td>
+                        <td>Mar 01, 2026</td>
+                        <td>Central Park</td>
+                        <td>42 / 50</td>
+                        <td><span class="status status-active">Active</span></td>
+                        <td><a href="#" style="color: var(--accent);">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 500; color: var(--text-primary);">The Art of Storytelling</td>
+                        <td>Mar 15, 2026</td>
+                        <td>Writers' Loft</td>
+                        <td>12 / 40</td>
+                        <td><span class="status status-active">Active</span></td>
+                        <td><a href="#" style="color: var(--accent);">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 500; color: var(--text-primary);">Spring Photography Workshop</td>
+                        <td>Apr 10, 2026</td>
+                        <td>Botanical Gardens</td>
+                        <td>0 / 15</td>
+                        <td><span class="status status-draft">Draft</span></td>
+                        <td><a href="#" style="color: var(--accent);">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 500; color: var(--text-primary);">New Year's Eve Gala</td>
+                        <td>Dec 31, 2025</td>
+                        <td>Grand Hotel</td>
+                        <td>300 / 300</td>
+                        <td><span class="status status-ended">Ended</span></td>
+                        <td><a href="#" style="color: var(--accent);">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button disabled>Previous</button>
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next</button>
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>Home</span>
+        </a>
+        <a href="events.html" class="mobile-nav-item active">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            <span>Events</span>
+        </a>
+        <a href="create-event.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+            <span>Add</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Profile</span>
+        </a>
+    </nav>
+</body>
+
+</html>
