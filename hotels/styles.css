@@ -67,6 +67,7 @@ header {
 .brand {
     font-size: 2rem;
     color: var(--primary);
+    font-family: var(--font-heading);
 }
 
 .desktop-nav {
@@ -438,6 +439,10 @@ footer {
     .desktop-nav,
     .btn-book {
         display: none;
+    }
+
+    header {
+        justify-content: center;
     }
 
     .mobile-nav {
