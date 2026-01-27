@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Your Booking - Azure Sands Resort</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .booking-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .booking-form-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-family: inherit;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .summary-card {
+            background: var(--primary);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-confirm {
+            background: var(--accent);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 2rem;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .btn-confirm:hover {
+            filter: brightness(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .booking-container {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .summary-card {
+                position: relative;
+                top: 0;
+                order: -1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">Azure Sands</div>
+        <nav class="desktop-nav">
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms & Suites</a>
+            <a href="dining.html">Dining</a>
+            <a href="spa.html">Spa</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <a href="booking.html" class="btn-book">Book Now</a>
+    </header>
+
+    <div style="background: var(--primary); color: white; padding: 4rem 2rem; text-align: center;">
+        <h1>Secure Your Reservation</h1>
+        <p>You're one step away from paradise.</p>
+    </div>
+
+    <section>
+        <div class="booking-container">
+            <div>
+                <div class="booking-form-section">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Guest Details</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-input" placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-input" placeholder="Doe">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" placeholder="john.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-input" placeholder="+1 (555) 000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Special Requests</label>
+                        <textarea class="form-input" rows="3"
+                            placeholder="Dietary requirements, late check-in, etc."></textarea>
+                    </div>
+                </div>
+
+                <div class="booking-form-section">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary);">Payment Method</h3>
+                    <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                        <label
+                            style="flex: 1; border: 1px solid var(--primary); padding: 1rem; border-radius: 6px; text-align: center; cursor: pointer; background: rgba(74, 78, 105, 0.05);">
+                            <input type="radio" name="payment" checked>
+                            <span style="display: block; font-weight: 600; margin-top: 0.5rem;">Credit Card</span>
+                        </label>
+                        <label
+                            style="flex: 1; border: 1px solid var(--border); padding: 1rem; border-radius: 6px; text-align: center; cursor: pointer;">
+                            <input type="radio" name="payment">
+                            <span style="display: block; font-weight: 600; margin-top: 0.5rem;">PayPal</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Card Number</label>
+                        <input type="text" class="form-input" placeholder="0000 0000 0000 0000">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Expiry Date</label>
+                            <input type="text" class="form-input" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">CVC</label>
+                            <input type="text" class="form-input" placeholder="123">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Cardholder Name</label>
+                        <input type="text" class="form-input" placeholder="John Doe">
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <h3 style="margin-bottom: 1.5rem; font-family: var(--font-body);">Booking Summary</h3>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <strong style="display: block; font-size: 1.2rem; margin-bottom: 0.25rem;">Ocean View Suite</strong>
+                    <span style="opacity: 0.8; font-size: 0.9rem;">2 Nights • 2 Guests</span>
+                </div>
+
+                <div class="summary-item">
+                    <span>Oct 24 - Oct 26</span>
+                    <span>$700.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Taxes & Fees</span>
+                    <span>$125.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Resort Fee</span>
+                    <span>$50.00</span>
+                </div>
+
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>$875.00</span>
+                </div>
+
+                <button class="btn-confirm">Confirm Booking</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="brand" style="margin-bottom: 1rem; color: white;">Azure Sands</div>
+                <p style="opacity: 0.8; margin-bottom: 1.5rem; line-height: 1.6;">Where luxury meets the ocean.
+                    Experience an unforgettable stay at our world-class resort.</p>
+                <div class="social-links">
+                    <a href="#" class="social-icon">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                        </svg>
+                    </a>
+                    <a href="#" class="social-icon">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rooms.html">Rooms & Suites</a></li>
+                    <li><a href="dining.html">Dining</a></li>
+                    <li><a href="spa.html">Spa & Wellness</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="#">123 Ocean Drive, Malibu</a></li>
+                    <li><a href="#">+1 (555) 123-4567</a></li>
+                    <li><a href="#">reservations@azuresands.com</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 1rem;">Subscribe for exclusive offers and
+                    updates.</p>
+                <div style="display: flex; gap: 0.5rem;">
+                    <input type="email" placeholder="Your Email"
+                        style="padding: 0.5rem; border-radius: 4px; border: none; width: 100%;">
+                    <button
+                        style="background: var(--secondary); color: var(--text-main); border: none; padding: 0.5rem 1rem; border-radius: 4px; font-weight: 700; cursor: pointer;">Go</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Azure Sands Resort. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <nav class="mobile-nav">
+        <a href="index.html" class="nav-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            Home
+        </a>
+        <a href="rooms.html" class="nav-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            Rooms
+        </a>
+        <a href="booking.html" class="nav-item active">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            Book
+        </a>
+        <a href="contact.html" class="nav-item">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Contact
+        </a>
+    </nav>
+</body>
+
+</html>
