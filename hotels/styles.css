@@ -45,6 +45,8 @@ a {
 
 img {
     max-width: 100%;
+    width: 100%;
+    height: 100%;
     display: block;
     object-fit: cover;
 }
@@ -191,6 +193,15 @@ section {
     font-size: 3rem;
     color: var(--primary);
     margin-bottom: 3rem;
+}
+
+/* Contact Grid */
+.contact-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
 }
 
 /* Featured Rooms */
@@ -422,7 +433,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
 
     .desktop-nav,
     .btn-book {
@@ -435,6 +446,16 @@ footer {
 
     .hero-content h1 {
         font-size: 3rem;
+        line-height: 1.2;
+    }
+
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        min-height: 80vh;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
     }
 
     .booking-bar {
@@ -454,5 +475,10 @@ footer {
 
     section {
         padding: 3rem 1.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 }
