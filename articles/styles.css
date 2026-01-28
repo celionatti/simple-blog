@@ -105,6 +105,10 @@
             display: none;
         }
 
+        nav a.brand:hover {
+            color: var(--accent);
+        }
+
         /* Main Content */
         main {
             max-width: 1200px;
