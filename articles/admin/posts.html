@@ -49,7 +49,7 @@
                         <th>Published</th>
                         <th>Views</th>
                         <th>Status</th>
-                        <th>Actions</th>
+                        <th style="min-width: 140px;">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,35 +58,84 @@
                         <td>Jan 25, 2026</td>
                         <td>1,240</td>
                         <td><span class="status status-published">Published</span></td>
-                        <td><a href="#" style="color: var(--accent);">Edit</a></td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <a href="view-post.html" class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; text-decoration: none;">View</a>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Comment</button>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; color: var(--accent);">Delete</button>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td style="font-weight: 500; color: var(--text-primary);">Understanding OKLCH Colors</td>
                         <td>Jan 22, 2026</td>
                         <td>850</td>
                         <td><span class="status status-published">Published</span></td>
-                        <td><a href="#" style="color: var(--accent);">Edit</a></td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <a href="view-post.html" class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; text-decoration: none;">View</a>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Comment</button>
+                                <a href="view-post.html" class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; text-decoration: none;">View</a>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Comment</button>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; color: var(--accent);">Delete</button>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td style="font-weight: 500; color: var(--text-primary);">Finding Inspiration Daily</td>
                         <td>Jan 20, 2026</td>
                         <td>420</td>
                         <td><span class="status status-published">Published</span></td>
-                        <td><a href="#" style="color: var(--accent);">Edit</a></td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <a href="view-post.html" class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; text-decoration: none;">View</a>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Comment</button>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; color: var(--accent);">Delete</button>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td style="font-weight: 500; color: var(--text-primary);">Future of Web Font Loading</td>
                         <td>-</td>
                         <td>0</td>
                         <td><span class="status status-draft">Draft</span></td>
-                        <td><a href="#" style="color: var(--accent);">Edit</a></td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <a href="view-post.html" class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; text-decoration: none;">View</a>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Comment</button>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; color: var(--accent);">Delete</button>
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td style="font-weight: 500; color: var(--text-primary);">CSS Grid vs Flexbox 2026</td>
                         <td>-</td>
                         <td>0</td>
                         <td><span class="status status-draft">Draft</span></td>
-                        <td><a href="#" style="color: var(--accent);">Edit</a></td>
+                        <td>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <a href="view-post.html" class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; text-decoration: none;">View</a>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem;">Comment</button>
+                                <button class="btn btn-secondary"
+                                    style="padding: 0.3rem 0.6rem; font-size: 0.8rem; color: var(--accent);">Delete</button>
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -122,13 +171,16 @@
             </svg>
             <span>Posts</span>
         </a>
-        <a href="create-post.html" class="mobile-nav-item">
+        <a href="categories.html" class="mobile-nav-item">
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="16"></line>
-                <line x1="8" y1="12" x2="16" y2="12"></line>
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
             </svg>
-            <span>Write</span>
+            <span>Cats</span>
         </a>
         <a href="profile.html" class="mobile-nav-item">
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
