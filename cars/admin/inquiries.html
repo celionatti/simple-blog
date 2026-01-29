@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiries - AutoHub Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="admin-brand">
+                <a href="../index.html" class="brand">AutoHub</a>
+                <p style="font-size: 0.8rem; color: var(--text-tertiary); margin-top: 0.25rem;">Admin Panel</p>
+            </div>
+
+            <nav>
+                <a href="dashboard.html" class="admin-nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="9" />
+                        <rect x="14" y="3" width="7" height="5" />
+                        <rect x="14" y="12" width="7" height="9" />
+                        <rect x="3" y="16" width="7" height="5" />
+                    </svg>
+                    Dashboard
+                </a>
+                <a href="manage-cars.html" class="admin-nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                    Manage Cars
+                </a>
+                <a href="edit-car.html" class="admin-nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 20h9" />
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                    </svg>
+                    Add New Car
+                </a>
+                <a href="inquiries.html" class="admin-nav-item active">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                    Inquiries
+                </a>
+                <a href="#" class="admin-nav-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M12 1v6m0 6v6m5.2-13.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H1m18.2 5.2l-4.2-4.2m0-6l4.2-4.2" />
+                    </svg>
+                    Settings
+                </a>
+                <a href="login.html" class="admin-nav-item" style="margin-top: auto;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                        <polyline points="16 17 21 12 16 7" />
+                        <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg>
+                    Logout
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+            <div class="admin-header">
+                <div>
+                    <h1>Customer Inquiries</h1>
+                    <p style="color: var(--text-secondary); margin-top: 0.5rem;">Manage customer questions and requests
+                    </p>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div
+                style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+                <div class="filters-grid">
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Search</label>
+                        <input type="text" class="form-input" placeholder="Search by name, email, or subject...">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Status</label>
+                        <select class="form-select">
+                            <option>All Status</option>
+                            <option>New</option>
+                            <option>In Progress</option>
+                            <option>Responded</option>
+                            <option>Closed</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Subject</label>
+                        <select class="form-select">
+                            <option>All Subjects</option>
+                            <option>General Inquiry</option>
+                            <option>Vehicle Information</option>
+                            <option>Test Drive</option>
+                            <option>Financing</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inquiries Table -->
+            <div class="admin-table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Subject</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>#INQ-001</strong></td>
+                            <td>John Smith</td>
+                            <td>john.smith@email.com</td>
+                            <td>Test Drive Request</td>
+                            <td>Jan 29, 2024</td>
+                            <td><span class="status-badge"
+                                    style="background: oklch(90% 0.1 60); color: oklch(50% 0.15 60);">New</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-002</strong></td>
+                            <td>Sarah Johnson</td>
+                            <td>sarah.j@email.com</td>
+                            <td>Vehicle Information</td>
+                            <td>Jan 28, 2024</td>
+                            <td><span class="status-badge status-available">Responded</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-003</strong></td>
+                            <td>Mike Davis</td>
+                            <td>mike.davis@email.com</td>
+                            <td>Financing Options</td>
+                            <td>Jan 28, 2024</td>
+                            <td><span class="status-badge"
+                                    style="background: oklch(90% 0.1 240); color: oklch(50% 0.15 240);">In
+                                    Progress</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-004</strong></td>
+                            <td>Emily Brown</td>
+                            <td>emily.b@email.com</td>
+                            <td>General Inquiry</td>
+                            <td>Jan 27, 2024</td>
+                            <td><span class="status-badge"
+                                    style="background: oklch(90% 0.1 60); color: oklch(50% 0.15 60);">New</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-005</strong></td>
+                            <td>David Wilson</td>
+                            <td>d.wilson@email.com</td>
+                            <td>Trade-In Valuation</td>
+                            <td>Jan 27, 2024</td>
+                            <td><span class="status-badge status-available">Responded</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-006</strong></td>
+                            <td>Lisa Anderson</td>
+                            <td>lisa.a@email.com</td>
+                            <td>Test Drive Request</td>
+                            <td>Jan 26, 2024</td>
+                            <td><span class="status-badge"
+                                    style="background: oklch(90% 0.05 264); color: oklch(50% 0.1 264);">Closed</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-007</strong></td>
+                            <td>Robert Taylor</td>
+                            <td>rob.taylor@email.com</td>
+                            <td>Vehicle Information</td>
+                            <td>Jan 26, 2024</td>
+                            <td><span class="status-badge"
+                                    style="background: oklch(90% 0.1 60); color: oklch(50% 0.15 60);">New</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-008</strong></td>
+                            <td>Jennifer Lee</td>
+                            <td>jennifer.lee@email.com</td>
+                            <td>Rental Information</td>
+                            <td>Jan 25, 2024</td>
+                            <td><span class="status-badge status-available">Responded</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-009</strong></td>
+                            <td>James Martinez</td>
+                            <td>james.m@email.com</td>
+                            <td>Financing Options</td>
+                            <td>Jan 25, 2024</td>
+                            <td><span class="status-badge"
+                                    style="background: oklch(90% 0.1 240); color: oklch(50% 0.15 240);">In
+                                    Progress</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-010</strong></td>
+                            <td>Patricia Garcia</td>
+                            <td>patricia.g@email.com</td>
+                            <td>General Inquiry</td>
+                            <td>Jan 24, 2024</td>
+                            <td><span class="status-badge"
+                                    style="background: oklch(90% 0.05 264); color: oklch(50% 0.1 264);">Closed</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-011</strong></td>
+                            <td>Michael Brown</td>
+                            <td>m.brown@email.com</td>
+                            <td>Test Drive Request</td>
+                            <td>Jan 24, 2024</td>
+                            <td><span class="status-badge status-available">Responded</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-012</strong></td>
+                            <td>Susan White</td>
+                            <td>susan.white@email.com</td>
+                            <td>Vehicle Information</td>
+                            <td>Jan 23, 2024</td>
+                            <td><span class="status-badge"
+                                    style="background: oklch(90% 0.1 60); color: oklch(50% 0.15 60);">New</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-013</strong></td>
+                            <td>Thomas Harris</td>
+                            <td>thomas.h@email.com</td>
+                            <td>Trade-In Valuation</td>
+                            <td>Jan 23, 2024</td>
+                            <td><span class="status-badge"
+                                    style="background: oklch(90% 0.1 240); color: oklch(50% 0.15 240);">In
+                                    Progress</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-014</strong></td>
+                            <td>Karen Clark</td>
+                            <td>karen.clark@email.com</td>
+                            <td>Rental Information</td>
+                            <td>Jan 22, 2024</td>
+                            <td><span class="status-badge status-available">Responded</span></td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>#INQ-015</strong></td>
+                            <td>Daniel Lewis</td>
+                            <td>daniel.lewis@email.com</td>
+                            <td>General Inquiry</td>
+                            <td>Jan 22, 2024</td>
+                            <td><span class="status-badge"
+                                    style="background: oklch(90% 0.05 264); color: oklch(50% 0.1 264);">Closed</span>
+                            </td>
+                            <td>
+                                <div class="table-actions">
+                                    <button class="action-btn action-btn-edit">View</button>
+                                    <button class="action-btn action-btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="pagination-btn" disabled>Previous</button>
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn">Next</button>
+            </div>
+
+            <p style="text-align: center; color: var(--text-secondary); margin-top: 1rem; font-size: 0.9rem;">
+                Showing 15 of 42 inquiries
+            </p>
+        </main>
+    </div>
+</body>
+
+</html>

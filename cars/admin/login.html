@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - AutoHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body style="background: var(--bg-secondary);">
+    <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 2rem;">
+        <div style="width: 100%; max-width: 450px;">
+            <!-- Logo -->
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <a href="../index.html" class="brand" style="font-size: 2.5rem;">AutoHub</a>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem;">Admin Portal</p>
+            </div>
+
+            <!-- Login Card -->
+            <div
+                style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 3rem; box-shadow: 0 10px 40px oklch(0% 0 0 / 0.05);">
+                <h1 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Welcome Back</h1>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Sign in to access the admin dashboard</p>
+
+                <form action="dashboard.html">
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" placeholder="admin@autohub.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-input" placeholder="Enter your password" required>
+                    </div>
+
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                            <input type="checkbox" style="width: 18px; height: 18px;">
+                            <span style="font-size: 0.9rem; color: var(--text-secondary);">Remember me</span>
+                        </label>
+                        <a href="#" style="font-size: 0.9rem; color: var(--accent);">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Sign In</button>
+                </form>
+
+                <div
+                    style="margin-top: 2rem; text-align: center; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+                    <a href="../index.html" style="color: var(--text-secondary); font-size: 0.9rem;">
+                        ← Back to Website
+                    </a>
+                </div>
+            </div>
+
+            <p style="text-align: center; color: var(--text-tertiary); font-size: 0.85rem; margin-top: 2rem;">
+                &copy; 2024 AutoHub. All rights reserved.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

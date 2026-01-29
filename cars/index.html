@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoHub - Premium Car Sales & Rentals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="brand">AutoHub</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="inventory.html">Inventory</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <a href="admin/login.html" class="btn btn-outline">Admin</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Find Your Perfect Ride</h1>
+            <p>Discover premium cars for sale and rent. Quality vehicles, trusted service.</p>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Search by make, model, or type...">
+            </div>
+        </section>
+
+        <!-- Filters -->
+        <div class="filters">
+            <button class="filter-pill active">All Cars</button>
+            <button class="filter-pill">For Sale</button>
+            <button class="filter-pill">For Rent</button>
+            <button class="filter-pill">SUV</button>
+            <button class="filter-pill">Sedan</button>
+            <button class="filter-pill">Sports</button>
+            <button class="filter-pill">Electric</button>
+            <button class="filter-pill">Luxury</button>
+        </div>
+
+        <!-- Featured Cars Grid -->
+        <div class="car-grid">
+            <!-- Car Card 1 -->
+            <a href="car-details.html" class="car-card">
+                <div class="car-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=600&h=400&fit=crop"
+                        alt="BMW X5" class="car-image">
+                    <span class="car-badge">For Sale</span>
+                </div>
+                <div class="car-content">
+                    <h3 class="car-title">BMW X5 M Sport</h3>
+                    <p class="car-subtitle">2023 • Automatic • Petrol</p>
+                    <div class="car-specs">
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            15,000 km
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            Automatic
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                            4 Seats
+                        </span>
+                    </div>
+                    <div class="car-price">
+                        <div>
+                            <div class="car-price-value">$75,900</div>
+                            <div class="car-price-label">Purchase Price</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Car Card 2 -->
+            <a href="car-details.html" class="car-card">
+                <div class="car-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&h=400&fit=crop"
+                        alt="Mercedes C-Class" class="car-image">
+                    <span class="car-badge" style="background: var(--warning);">For Rent</span>
+                </div>
+                <div class="car-content">
+                    <h3 class="car-title">Mercedes-Benz C-Class</h3>
+                    <p class="car-subtitle">2024 • Automatic • Hybrid</p>
+                    <div class="car-specs">
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            8,500 km
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            Automatic
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                            5 Seats
+                        </span>
+                    </div>
+                    <div class="car-price">
+                        <div>
+                            <div class="car-price-value">$120/day</div>
+                            <div class="car-price-label">Rental Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Car Card 3 -->
+            <a href="car-details.html" class="car-card">
+                <div class="car-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600&h=400&fit=crop"
+                        alt="Audi A4" class="car-image">
+                    <span class="car-badge">For Sale</span>
+                </div>
+                <div class="car-content">
+                    <h3 class="car-title">Audi A4 Quattro</h3>
+                    <p class="car-subtitle">2023 • Automatic • Diesel</p>
+                    <div class="car-specs">
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            22,000 km
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            Automatic
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                            5 Seats
+                        </span>
+                    </div>
+                    <div class="car-price">
+                        <div>
+                            <div class="car-price-value">$52,500</div>
+                            <div class="car-price-label">Purchase Price</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Car Card 4 -->
+            <a href="car-details.html" class="car-card">
+                <div class="car-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&h=400&fit=crop"
+                        alt="Tesla Model 3" class="car-image">
+                    <span class="car-badge" style="background: var(--success);">Electric</span>
+                </div>
+                <div class="car-content">
+                    <h3 class="car-title">Tesla Model 3 Performance</h3>
+                    <p class="car-subtitle">2024 • Automatic • Electric</p>
+                    <div class="car-specs">
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            5,200 km
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            Automatic
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                            5 Seats
+                        </span>
+                    </div>
+                    <div class="car-price">
+                        <div>
+                            <div class="car-price-value">$68,900</div>
+                            <div class="car-price-label">Purchase Price</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Car Card 5 -->
+            <a href="car-details.html" class="car-card">
+                <div class="car-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=600&h=400&fit=crop"
+                        alt="Range Rover" class="car-image">
+                    <span class="car-badge" style="background: var(--warning);">For Rent</span>
+                </div>
+                <div class="car-content">
+                    <h3 class="car-title">Range Rover Sport</h3>
+                    <p class="car-subtitle">2023 • Automatic • Petrol</p>
+                    <div class="car-specs">
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            18,000 km
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            Automatic
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                            7 Seats
+                        </span>
+                    </div>
+                    <div class="car-price">
+                        <div>
+                            <div class="car-price-value">$180/day</div>
+                            <div class="car-price-label">Rental Rate</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Car Card 6 -->
+            <a href="car-details.html" class="car-card">
+                <div class="car-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&h=400&fit=crop"
+                        alt="Porsche 911" class="car-image">
+                    <span class="car-badge">For Sale</span>
+                </div>
+                <div class="car-content">
+                    <h3 class="car-title">Porsche 911 Carrera</h3>
+                    <p class="car-subtitle">2024 • Manual • Petrol</p>
+                    <div class="car-specs">
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            3,800 km
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                            </svg>
+                            Manual
+                        </span>
+                        <span class="car-spec">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                            </svg>
+                            2 Seats
+                        </span>
+                    </div>
+                    <div class="car-price">
+                        <div>
+                            <div class="car-price-value">$125,000</div>
+                            <div class="car-price-label">Purchase Price</div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- View All Button -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="inventory.html" class="btn btn-primary">View All Inventory</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AutoHub</h4>
+                <p>Premium car sales and rentals. Your trusted automotive partner.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="inventory.html">Inventory</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="inventory.html?filter=sale">Buy a Car</a>
+                <a href="inventory.html?filter=rent">Rent a Car</a>
+                <a href="#">Financing</a>
+                <a href="#">Trade-In</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>123 Auto Street<br>City, State 12345</p>
+                <p>Phone: (555) 123-4567<br>Email: info@autohub.com</p>
+            </div>
+        </div>
+        <p style="margin-top: 2rem;">&copy; 2024 AutoHub. All rights reserved.</p>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item active">
+            <svg viewBox="0 0 24 24">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            <span>Home</span>
+        </a>
+        <a href="inventory.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7" />
+                <rect x="14" y="3" width="7" height="7" />
+                <rect x="14" y="14" width="7" height="7" />
+                <rect x="3" y="14" width="7" height="7" />
+            </svg>
+            <span>Browse</span>
+        </a>
+        <a href="#" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            <span>Favorites</span>
+        </a>
+        <a href="contact.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span>Profile</span>
+        </a>
+    </nav>
+</body>
+
+</html>
