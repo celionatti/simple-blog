@@ -1,3 +1,37 @@
+/**
+ * ============================================================================
+ * SERENITY ADMIN - Blog Admin Dashboard Styles
+ * ============================================================================
+ * 
+ * @name        Serenity Admin - Blog Dashboard Template
+ * @version     1.0.0
+ * @author      Celio Natti
+ * @license     Commercial License - All rights reserved
+ * @copyright   Copyright (c) 2026 Celio Natti
+ * 
+ * @description Admin dashboard styles for the Serenity blog template.
+ *              Features a clean, professional interface with statistics
+ *              cards, data tables, and comprehensive content management.
+ * 
+ * @features    - OKLCH Color System with blue accent theme
+ *              - Dashboard statistics cards
+ *              - Responsive data tables
+ *              - Post and category management
+ *              - Comment moderation interface
+ *              - User profile settings
+ *              - Mobile-friendly bottom navigation
+ * 
+ * @contact     For support, customization, or inquiries:
+ *              Email: celionatti@gmail.com
+ *              GitHub: https://github.com/celionatti
+ * 
+ * @note        This template is protected by copyright law. Unauthorized
+ *              reproduction, distribution, or modification is prohibited.
+ *              Purchase grants you a single-use license for one project.
+ * 
+ * ============================================================================
+ */
+
 /* Base Styles using OKLCH (Inherited from Main) */
 * {
     margin: 0;
