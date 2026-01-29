@@ -155,17 +155,22 @@
                             <div class="form-row">
                                 <div class="form-group">
                                     <label class="form-label">Name</label>
-                                    <input type="text" class="form-input" placeholder="Your Name">
+                                    <input type="text" class="form-input is-valid" placeholder="Your Name"
+                                        value="John Doe">
+                                    <div class="valid-feedback">Looks good!</div>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Email</label>
-                                    <input type="email" class="form-input" placeholder="Your Email">
+                                    <input type="email" class="form-input is-invalid" placeholder="Your Email"
+                                        value="john@doe">
+                                    <div class="invalid-feedback">Please provide a valid email address.</div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Message</label>
                                 <textarea class="form-textarea" placeholder="Share your thoughts..."
                                     style="min-height: 120px;"></textarea>
+                                <div class="invalid-feedback">Please enter a message.</div>
                             </div>
                             <button type="submit" class="btn-primary" style="width: auto;">Post Comment</button>
                         </form>
