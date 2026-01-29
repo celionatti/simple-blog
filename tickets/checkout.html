@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Celio Natti">
+    <meta name="description" content="Complete your ticket purchase - EventFlow secure checkout.">
+    <title>Checkout - EventFlow</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .checkout-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .checkout-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .order-summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .total-row {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            border-bottom: none;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .checkout-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="brand">EventFlow</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="events.html">Events</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-auth">
+                <a href="auth/login.html" class="btn btn-secondary">Sign In</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="section-title" style="margin-top: 2rem;">
+                <h1>Checkout</h1>
+                <p>Complete your ticket purchase</p>
+            </div>
+
+            <div class="checkout-grid">
+                <div>
+                    <div class="checkout-card">
+                        <h2>Customer Information</h2>
+                        <form style="margin-top: 1.5rem;">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-input" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-input" placeholder="+1 (555) 123-4567" required>
+                            </div>
+
+                            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Payment Information</h3>
+                            <div class="form-group">
+                                <label class="form-label">Card Number</label>
+                                <input type="text" class="form-input" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Expiry Date</label>
+                                    <input type="text" class="form-input" placeholder="MM/YY" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">CVV</label>
+                                    <input type="text" class="form-input" placeholder="123" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 2rem;">
+                                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                    <input type="checkbox" required style="accent-color: var(--primary);">
+                                    <span>I agree to the <a href="#" style="color: var(--primary);">Terms &
+                                            Conditions</a></span>
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary"
+                                style="width: 100%; margin-top: 1.5rem; justify-content: center;">
+                                Complete Purchase
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="checkout-card">
+                        <h3>Order Summary</h3>
+                        <div style="margin-top: 1.5rem;">
+                            <div
+                                style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                                <h4 style="margin-bottom: 0.5rem;">Summer Music Festival 2026</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.9rem;">June 15-17, 2026</p>
+                            </div>
+
+                            <div class="order-summary-item">
+                                <span>General Admission x 2</span>
+                                <span>$90.00</span>
+                            </div>
+                            <div class="order-summary-item">
+                                <span>Service Fee</span>
+                                <span>$5.00</span>
+                            </div>
+                            <div class="order-summary-item">
+                                <span>Processing Fee</span>
+                                <span>$2.50</span>
+                            </div>
+                            <div class="order-summary-item total-row">
+                                <span>Total</span>
+                                <span>$97.50</span>
+                            </div>
+                        </div>
+
+                        <div
+                            style="background: var(--bg-secondary); padding: 1rem; border-radius: 8px; margin-top: 1.5rem;">
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); text-align: center;">
+                                🔒 Secure checkout powered by EventFlow<br>
+                                Your payment information is encrypted and secure
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>EventFlow</h4>
+                    <p style="color: var(--text-tertiary); margin-top: 0.5rem;">
+                        Your trusted platform for discovering and booking amazing events.
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EventFlow. All rights reserved. | Template by <a
+                        href="https://github.com/celionatti">Celio Natti</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Celio Natti">
+    <meta name="description" content="Analytics and insights - EventFlow Admin.">
+    <title>Analytics - EventFlow Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="admin-header">
+        <nav class="container">
+            <a href="index.html" class="brand" style="color: white;">EventFlow Admin</a>
+            <div class="admin-nav-links">
+                <a href="index.html">Dashboard</a>
+                <a href="events.html">Events</a>
+                <a href="bookings.html">Bookings</a>
+                <a href="analytics.html" class="active">Analytics</a>
+            </div>
+            <div class="nav-auth">
+                <a href="../user/profile.html" class="btn btn-secondary">Profile</a>
+                <a href="../auth/login.html" class="btn btn-outline">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="section-title" style="margin-top: 2rem;">
+                <h1>Analytics & Insights</h1>
+                <p>Track your platform performance</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Total Revenue</div>
+                    <div class="stat-value">$54,320</div>
+                    <div class="stat-change positive">↑ 18% vs last month</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Tickets Sold</div>
+                    <div class="stat-value">1,247</div>
+                    <div class="stat-change positive">↑ 23% vs last month</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Avg. Ticket Price</div>
+                    <div class="stat-value">$43.56</div>
+                    <div class="stat-change negative">↓ 4% vs last month</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Conversion Rate</div>
+                    <div class="stat-value">3.8%</div>
+                    <div class="stat-change positive">↑ 0.5% vs last month</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h2>Top Performing Events</h2>
+                <div class="data-table" style="margin-top: 1.5rem;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Event Name</th>
+                                <th>Tickets Sold</th>
+                                <th>Revenue</th>
+                                <th>Avg. Price</th>
+                                <th>Sell-Through Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Broadway Spectacular</td>
+                                <td>156</td>
+                                <td>$18,720</td>
+                                <td>$120.00</td>
+                                <td><span class="badge success">78%</span></td>
+                            </tr>
+                            <tr>
+                                <td>Championship Finals</td>
+                                <td>189</td>
+                                <td>$16,065</td>
+                                <td>$85.00</td>
+                                <td><span class="badge success">63%</span></td>
+                            </tr>
+                            <tr>
+                                <td>Summer Music Festival</td>
+                                <td>342</td>
+                                <td>$15,390</td>
+                                <td>$45.00</td>
+                                <td><span class="badge warning">68%</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tech Summit 2026</td>
+                                <td>67</td>
+                                <td>$13,333</td>
+                                <td>$199.00</td>
+                                <td><span class="badge info">45%</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <h2>Revenue by Category</h2>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                    <div
+                        style="background: var(--bg-card); padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-md);">
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Music</div>
+                        <div style="font-size: 1.5rem; font-weight: 700; margin-top: 0.5rem;">$22,450</div>
+                        <div style="color: var(--admin-success); font-size: 0.85rem; margin-top: 0.5rem;">41% of total
+                        </div>
+                    </div>
+                    <div
+                        style="background: var(--bg-card); padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-md);">
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Sports</div>
+                        <div style="font-size: 1.5rem; font-weight: 700; margin-top: 0.5rem;">$16,065</div>
+                        <div style="color: var(--admin-success); font-size: 0.85rem; margin-top: 0.5rem;">30% of total
+                        </div>
+                    </div>
+                    <div
+                        style="background: var(--bg-card); padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-md);">
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Theater</div>
+                        <div style="font-size: 1.5rem; font-weight: 700; margin-top: 0.5rem;">$10,472</div>
+                        <div style="color: var(--admin-success); font-size: 0.85rem; margin-top: 0.5rem;">19% of total
+                        </div>
+                    </div>
+                    <div
+                        style="background: var(--bg-card); padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-md);">
+                        <div style="color: var(--text-secondary); font-size: 0.9rem;">Other</div>
+                        <div style="font-size: 1.5rem; font-weight: 700; margin-top: 0.5rem;">$5,333</div>
+                        <div style="color: var(--admin-success); font-size: 0.85rem; margin-top: 0.5rem;">10% of total
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="padding: 2rem 0;">
+                <p>&copy; 2026 EventFlow. All rights reserved. | Template by <a
+                        href="https://github.com/celionatti">Celio Natti</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

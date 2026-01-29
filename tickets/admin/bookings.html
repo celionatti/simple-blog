@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Celio Natti">
+    <meta name="description" content="View all bookings - EventFlow Admin.">
+    <title>Bookings - EventFlow Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="admin-header">
+        <nav class="container">
+            <a href="index.html" class="brand" style="color: white;">EventFlow Admin</a>
+            <div class="admin-nav-links">
+                <a href="index.html">Dashboard</a>
+                <a href="events.html">Events</a>
+                <a href="bookings.html" class="active">Bookings</a>
+                <a href="analytics.html">Analytics</a>
+            </div>
+            <div class="nav-auth">
+                <a href="../user/profile.html" class="btn btn-secondary">Profile</a>
+                <a href="../auth/login.html" class="btn btn-outline">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="section-title" style="margin-top: 2rem;">
+                <h1>All Bookings</h1>
+                <p>View and manage ticket bookings</p>
+            </div>
+
+            <div class="data-table" style="margin-top: 2rem;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer</th>
+                            <th>Email</th>
+                            <th>Event</th>
+                            <th>Tickets</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#EF-001234</td>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                            <td>Summer Music Festival</td>
+                            <td>2</td>
+                            <td>$90.00</td>
+                            <td>Jan 25, 2026</td>
+                            <td><span class="badge success">Confirmed</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-secondary">👁️</button>
+                                    <button class="btn-icon btn-secondary">✉️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#EF-001235</td>
+                            <td>Jane Smith</td>
+                            <td>jane@example.com</td>
+                            <td>Championship Finals</td>
+                            <td>4</td>
+                            <td>$340.00</td>
+                            <td>Jan 26, 2026</td>
+                            <td><span class="badge success">Confirmed</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-secondary">👁️</button>
+                                    <button class="btn-icon btn-secondary">✉️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#EF-001236</td>
+                            <td>Mike Johnson</td>
+                            <td>mike@example.com</td>
+                            <td>Broadway Spectacular</td>
+                            <td>2</td>
+                            <td>$240.00</td>
+                            <td>Jan 27, 2026</td>
+                            <td><span class="badge warning">Pending</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-secondary">👁️</button>
+                                    <button class="btn-icon btn-secondary">✉️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#EF-001237</td>
+                            <td>Sarah Williams</td>
+                            <td>sarah@example.com</td>
+                            <td>Tech Summit 2026</td>
+                            <td>1</td>
+                            <td>$199.00</td>
+                            <td>Jan 28, 2026</td>
+                            <td><span class="badge success">Confirmed</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-secondary">👁️</button>
+                                    <button class="btn-icon btn-secondary">✉️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#EF-001238</td>
+                            <td>David Brown</td>
+                            <td>david@example.com</td>
+                            <td>Food & Wine Festival</td>
+                            <td>3</td>
+                            <td>$165.00</td>
+                            <td>Jan 29, 2026</td>
+                            <td><span class="badge danger">Cancelled</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon btn-secondary">👁️</button>
+                                    <button class="btn-icon btn-secondary">✉️</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="padding: 2rem 0;">
+                <p>&copy; 2026 EventFlow. All rights reserved. | Template by <a
+                        href="https://github.com/celionatti">Celio Natti</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
