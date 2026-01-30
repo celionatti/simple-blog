@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Celio Natti">
+    <meta name="description" content="Serenity Admin - Manage notification preferences.">
+    <title>Notifications - Serenity Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e5e7eb;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.toggle-slider {
+            background-color: var(--primary);
+        }
+
+        input:checked+.toggle-slider:before {
+            transform: translateX(20px);
+        }
+
+        .notification-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .notification-item:last-child {
+            border-bottom: none;
+        }
+
+        .notification-info h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .notification-info p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">Serenity <span class="admin-badge">Admin</span></div>
+        <nav class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="posts.html">Posts</a>
+            <a href="comments.html">Comments</a>
+            <a href="categories.html">Categories</a>
+            <a href="profile.html" class="active">Settings</a>
+        </nav>
+        <a href="profile.html" class="user-profile">
+            <span>Jane Doe</span>
+            <div class="avatar"></div>
+        </a>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">Profile & Settings</h1>
+        </div>
+
+        <section class="profile-header-card">
+            <div class="profile-avatar-large">
+                <span>JD</span>
+            </div>
+            <div class="profile-info">
+                <h1>Jane Doe</h1>
+                <p>Editor-in-Chief</p>
+                <div class="profile-stats">
+                    <div class="p-stat-item">
+                        <span class="p-stat-value">Oct 2024</span> Member Since
+                    </div>
+                    <div class="p-stat-item">
+                        <span class="p-stat-value">24</span> Posts Written
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="settings-grid">
+            <aside class="settings-nav">
+                <a href="profile.html" class="settings-link">My Account</a>
+                <a href="settings.html" class="settings-link">Security & Settings</a>
+                <a href="notifications.html" class="settings-link active">Notifications</a>
+            </aside>
+
+            <div class="settings-content">
+                <div class="form-card" style="margin: 0; max-width: 100%;">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.2rem;">Email Notifications</h3>
+
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h4>Comments</h4>
+                            <p>Receive emails when someone comments on your posts.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h4>New Subscribers</h4>
+                            <p>Receive emails when you get a new newsletter subscriber.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h4>Mentions</h4>
+                            <p>Receive emails when you are mentioned in a post or comment.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h4>Product Updates</h4>
+                            <p>Receive emails about new features and updates to Serenity.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="form-card" style="margin: 2rem 0 0; max-width: 100%;">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.2rem;">Push Notifications</h3>
+
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h4>Direct Messages</h4>
+                            <p>Get notified when you receive a direct message.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notification-item">
+                        <div class="notification-info">
+                            <h4>Security Alerts</h4>
+                            <p>Get notified about important security alerts.</p>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" checked>
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem;">
+                    <button type="button" class="btn btn-secondary">Reset to Default</button>
+                    <button type="submit" class="btn btn-primary">Save Preferences</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span>Home</span>
+        </a>
+        <a href="posts.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>Posts</span>
+        </a>
+        <a href="categories.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            <span>Cats</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-item active">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Profile</span>
+        </a>
+    </nav>
+</body>
+
+</html>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Celio Natti">
-    <meta name="description" content="Serenity Admin - User profile settings.">
-    <title>Profile - Serenity Admin</title>
+    <meta name="description" content="Serenity Admin - Security and site settings.">
+    <title>Settings - Serenity Admin</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,8 +21,9 @@
         <nav class="nav-links">
             <a href="index.html">Dashboard</a>
             <a href="posts.html">Posts</a>
-            <a href="#">Comments</a>
-            <a href="#" class="active">Settings</a>
+            <a href="comments.html">Comments</a>
+            <a href="categories.html">Categories</a>
+            <a href="profile.html" class="active">Settings</a>
         </nav>
         <a href="profile.html" class="user-profile">
             <span>Jane Doe</span>
@@ -55,41 +56,51 @@
 
         <section class="settings-grid">
             <aside class="settings-nav">
-                <a href="profile.html" class="settings-link active">My Account</a>
-                <a href="settings.html" class="settings-link">Security & Settings</a>
+                <a href="profile.html" class="settings-link">My Account</a>
+                <a href="settings.html" class="settings-link active">Security & Settings</a>
                 <a href="notifications.html" class="settings-link">Notifications</a>
             </aside>
 
-            <form class="form-card" style="margin: 0; max-width: 100%;">
-                <h3 style="margin-bottom: 2rem; font-size: 1.2rem;">Author Details</h3>
+            <div class="settings-content">
+                <form class="form-card" style="margin: 0; max-width: 100%; margin-bottom: 2rem;">
+                    <h3 style="margin-bottom: 2rem; font-size: 1.2rem;">Change Password</h3>
 
-                <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label">First Name</label>
-                        <input type="text" class="form-input" value="Jane">
+                        <label class="form-label">Current Password</label>
+                        <input type="password" class="form-input" placeholder="••••••••">
                     </div>
-                    <div class="form-group">
-                        <label class="form-label">Last Name</label>
-                        <input type="text" class="form-input" value="Doe">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">New Password</label>
+                            <input type="password" class="form-input" placeholder="••••••••">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Confirm New Password</label>
+                            <input type="password" class="form-input" placeholder="••••••••">
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 1rem;">
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                    </div>
+                </form>
+
+                <div class="form-card" style="margin: 0; max-width: 100%;">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.2rem;">Two-Factor Authentication</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem;">
+                        Add an extra layer of security to your account by enabling two-factor authentication (2FA).
+                    </p>
+                    <div
+                        style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; background: var(--bg-body); border-radius: 8px;">
+                        <div>
+                            <span style="font-weight: 500; display: block;">2FA Status</span>
+                            <span style="color: var(--text-tertiary); font-size: 0.85rem;">Currently disabled</span>
+                        </div>
+                        <button class="btn btn-secondary">Enable 2FA</button>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label class="form-label">Email Address</label>
-                    <input type="email" class="form-input" value="jane.doe@example.com">
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">Author Bio</label>
-                    <textarea class="form-textarea"
-                        style="min-height: 80px;">Passionate about minimalism and design.</textarea>
-                </div>
-
-                <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem;">
-                    <button type="button" class="btn btn-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-primary">Save Changes</button>
-                </div>
-            </form>
+            </div>
         </section>
     </main>
 
