@@ -147,7 +147,14 @@ header {
     width: 36px;
     height: 36px;
     background: var(--border-color);
+    color: var(--accent);
+    font-weight: 600;
     border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Main Layout */
