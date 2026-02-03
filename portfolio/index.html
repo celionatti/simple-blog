@@ -15,17 +15,46 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Check for saved theme even before CSS loads to prevent flash
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
 </head>
 
 <body>
+    <!-- Page Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <span class="loader-text brand">Serenity</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
 
     <header>
         <nav>
             <a href="index.html" class="brand">Serenity</a>
             <div class="nav-links">
                 <a href="#projects">Work</a>
+                <a href="#experience">Experience</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
                 <a href="#" class="nav-cv" download>Download CV</a>
             </div>
         </nav>
@@ -33,7 +62,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero reveal-up">
+        <section class="hero reveal-up" id="home">
             <span class="hero-subtitle">Based in Earth</span>
             <h1>Crafting digital experiences with purpose and precision.</h1>
             <p>I'm a designer and developer focused on creating minimalist, high-impact web solutions that bridge the
@@ -80,57 +109,107 @@
                         <a href="#" class="project-link">View Project</a>
                     </div>
                 </article>
-
-                <!-- Project 3 -->
-                <article class="project-card reveal-up">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1200&q=80"
-                            alt="E-commerce Design">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">Design & Dev</span>
-                        <h3>Vela Store</h3>
-                        <p>An e-commerce experience for a luxury hand-poured candle brand.</p>
-                        <a href="#" class="project-link">View Project</a>
-                    </div>
-                </article>
-
-                <!-- Project 4 -->
-                <article class="project-card reveal-up">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
-                            alt="Data Analytics Dashboard">
-                    </div>
-                    <div class="project-info">
-                        <span class="project-category">SaaS</span>
-                        <h3>Aura Analytics</h3>
-                        <p>A modern dashboard providing deep insights for creative entrepreneurs.</p>
-                        <a href="#" class="project-link">Read Case Study</a>
-                    </div>
-                </article>
             </div>
         </section>
 
-        <!-- About Section -->
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="section-header reveal-up">
+                <span class="section-label">My Path</span>
+                <h2>Experience</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-date">2023 — Present</div>
+                    <div class="timeline-content">
+                        <h3>Senior Frontend Developer</h3>
+                        <span class="timeline-org">Innotech Studios</span>
+                        <p>Leading the architectural design of modern web applications, focusing on performance
+                            optimization and user-centric design systems.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-date">2021 — 2023</div>
+                    <div class="timeline-content">
+                        <h3>UI/UX Designer</h3>
+                        <span class="timeline-org">Creative Flow Agency</span>
+                        <p>Crafting intuitive user journeys and visual languages for international brands across FinTech
+                            and E-commerce sectors.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-date">2019 — 2021</div>
+                    <div class="timeline-content">
+                        <h3>Web Developer</h3>
+                        <span class="timeline-org">Freelance</span>
+                        <p>Building custom digital solutions for startups, specializing in creating high-converting
+                            landing pages and portfolios.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Skills Section -->
         <section id="about" class="about">
             <div class="about-content reveal-up">
                 <span class="section-label">The Story</span>
                 <h2>Obsessed with the details that matter.</h2>
-                <p>With over 5 years of experience in the digital space, I've learned that truly great design isn't just
-                    about how it looks, but how it works and feels to the user.</p>
-                <p>I specialize in translating complex ideas into simple, intuitive digital products that resonate with
-                    users and drive results.</p>
-                <ul class="skills-list">
-                    <li>UI/UX Design</li>
-                    <li>Frontend Architecture</li>
-                    <li>Brand Identity</li>
-                    <li>Web Performance</li>
-                    <li>Minimalist Design</li>
-                </ul>
+                <div class="about-text">
+                    <p>Truly great design isn't just about how it looks, but how it works and feels to the user.</p>
+                    <p>I specialize in translating complex ideas into simple, intuitive digital products that resonate
+                        with users and drive results.</p>
+                </div>
+
+                <div class="skills-container">
+                    <div class="skills-group">
+                        <h4>Design</h4>
+                        <ul class="skills-list">
+                            <li>UI/UX Design</li>
+                            <li>Brand Identity</li>
+                            <li>Minimalism</li>
+                            <li>Figma</li>
+                        </ul>
+                    </div>
+                    <div class="skills-group">
+                        <h4>Development</h4>
+                        <ul class="skills-list">
+                            <li>React / Next.js</li>
+                            <li>Tailwind CSS</li>
+                            <li>PHP / Laravel</li>
+                            <li>TypeScript</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="about-image-wrapper reveal-up">
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Celio Natti"
-                    style="width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 4px; filter: grayscale(100%);">
+                    class="themed-image">
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="section-header reveal-up">
+                <span class="section-label">Kind Words</span>
+                <h2>Testimonials</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal-up">
+                    <p>"Celio has an incredible eye for detail. He transformed our complex platform into a simple,
+                        elegant experience that our users love."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Sarah Jenkins</span>
+                        <span class="author-role">CEO, TechStart</span>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal-up">
+                    <p>"One of the most talented developers I've worked with. His ability to bridge design and code is
+                        truly exceptional."</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Marcus Thorne</span>
+                        <span class="author-role">Product Lead, CreativeFlow</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -146,6 +225,7 @@
     <footer>
         <div class="footer-nav">
             <a href="#projects">Work</a>
+            <a href="#experience">Experience</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
             <a href="https://twitter.com/celionatti">Twitter</a>
@@ -165,6 +245,13 @@
                     <line x1="9" y1="21" x2="9" y2="9"></line>
                 </svg>
                 <span>Work</span>
+            </a>
+            <a href="#experience" class="mobile-nav-item" data-section="experience">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 20v-6M6 20V10M18 20V4"></path>
+                </svg>
+                <span>Stats</span>
             </a>
             <a href="#about" class="mobile-nav-item" data-section="about">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
