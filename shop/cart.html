@@ -25,13 +25,13 @@
             <a href="#">Journal</a>
         </nav>
         <div class="header-actions">
-            <a href="#" class="search-icon">
+            <button class="search-icon" id="search-trigger" aria-label="Search">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                 </svg>
-            </a>
+            </button>
             <a href="cart.html" class="cart-icon">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">
@@ -135,7 +135,7 @@
             </svg>
             <span>Shop</span>
         </a>
-        <a href="#" class="mobile-nav-item">
+        <a href="#" class="mobile-nav-item" id="mobile-search-trigger">
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -158,6 +158,69 @@
             <span>Account</span>
         </a>
     </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-header">
+            <button class="close-search" id="close-search" aria-label="Close search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="search-content">
+            <div class="search-input-wrapper">
+                <input type="text" class="search-field" id="search-input" placeholder="Search for products..."
+                    autocomplete="off">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchOverlay = document.getElementById('search-overlay');
+            const searchInput = document.getElementById('search-input');
+            const searchTriggers = [
+                document.getElementById('search-trigger'),
+                document.getElementById('mobile-search-trigger')
+            ];
+            const closeSearch = document.getElementById('close-search');
+
+            searchTriggers.forEach(trigger => {
+                if (trigger) {
+                    trigger.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        searchOverlay.classList.add('active');
+                        document.body.classList.add('search-open');
+                        setTimeout(() => searchInput.focus(), 300);
+                    });
+                }
+            });
+
+            const closeSearchOverlay = () => {
+                searchOverlay.classList.remove('active');
+                document.body.classList.remove('search-open');
+            };
+
+            closeSearch.addEventListener('click', closeSearchOverlay);
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeSearchOverlay();
+            });
+
+            // Redirect to index with search query
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const query = e.target.value.trim();
+                    if (query) {
+                        window.location.href = `index.html?search=${encodeURIComponent(query)}`;
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
