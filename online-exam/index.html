@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Celio Natti">
+    <meta name="description" content="Online Exam Platform - Practice and master your skills.">
+    <title>Exams - Practice & Master</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="../articles/index.html">Articles</a>
+                <a href="#">Courses</a>
+            </div>
+            <a href="index.html" class="brand">Exams</a>
+            <div class="nav-right">
+                <a href="#">Login</a>
+                <a href="#" class="btn-primary-sm">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Master Your Skills with Online Exams</h1>
+                <p>Prepare for success with our comprehensive practice exams. Choose from a variety of topics including
+                    design, technology, and more.</p>
+                <a href="#courses" class="btn-primary">Browse Exams</a>
+            </div>
+        </section>
+
+        <section id="courses" class="courses-section">
+            <h2 class="section-title">Available Exams</h2>
+            <div class="courses-grid">
+                <!-- Course Card 1 -->
+                <div class="course-card">
+                    <div class="course-icon">🎨</div>
+                    <h3>Web Design Fundamentals</h3>
+                    <p class="course-meta">20 Questions • 30 Mins</p>
+                    <p>Test your knowledge of UI/UX principles, color theory, and typography.</p>
+                    <a href="exam.html?id=web-design" class="btn-outline">Start Practice</a>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="course-card">
+                    <div class="course-icon">💻</div>
+                    <h3>JavaScript Basics</h3>
+                    <p class="course-meta">25 Questions • 45 Mins</p>
+                    <p>Challenge yourself with core JavaScript concepts, DOM manipulation, and logic.</p>
+                    <a href="exam.html?id=js-basics" class="btn-outline">Start Practice</a>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="course-card">
+                    <div class="course-icon">⚛️</div>
+                    <h3>React Development</h3>
+                    <p class="course-meta">15 Questions • 25 Mins</p>
+                    <p>Assess your proficiency in React hooks, components, and state management.</p>
+                    <a href="exam.html?id=react-dev" class="btn-outline">Start Practice</a>
+                </div>
+
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <div class="course-icon">🐍</div>
+                    <h3>Python for Beginners</h3>
+                    <p class="course-meta">30 Questions • 40 Mins</p>
+                    <p>Practice Python syntax, data structures, and basic algorithms.</p>
+                    <a href="exam.html?id=python-basics" class="btn-outline">Start Practice</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">Exams</div>
+            <p>© 2026 Online Exams. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item active">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Home</span>
+        </a>
+        <a href="#courses" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+            <span>Exams</span>
+        </a>
+        <a href="#" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="4"></circle>
+                <path d="M20 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M4 21v-2a4 4 0 0 1 3-3.87"></path>
+            </svg>
+            <span>Profile</span>
+        </a>
+    </nav>
+</body>
+
+</html>

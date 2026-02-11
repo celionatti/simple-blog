@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam In Progress - Web Design Fundamentals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="exam-mode">
+    <header class="exam-header">
+        <div class="header-left">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                    <path d="M15 18l-6-6 6-6"></path>
+                </svg>
+                Exit
+            </a>
+            <h1 class="exam-title">Web Design Fundamentals</h1>
+        </div>
+        <div class="header-center">
+            <div class="timer">
+                <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                </svg>
+                <span id="time-remaining">29:59</span>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="progress-indicator">
+                <span>Question <span id="current-question-num">1</span> of <span id="total-questions">20</span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="exam-container">
+        <!-- Sidebar for Navigation -->
+        <aside class="exam-sidebar">
+            <div class="sidebar-header">
+                <h3>Question Palette</h3>
+            </div>
+            <div class="question-grid" id="question-palette">
+                <!-- Will be populated by JS -->
+                <button class="q-btn active">1</button>
+                <button class="q-btn answered">2</button>
+                <button class="q-btn flagged">3</button>
+                <button class="q-btn">4</button>
+                <button class="q-btn">5</button>
+                <button class="q-btn">6</button>
+                <button class="q-btn">7</button>
+                <button class="q-btn">8</button>
+                <button class="q-btn">9</button>
+                <button class="q-btn">10</button>
+            </div>
+            <div class="sidebar-legend">
+                <div class="legend-item"><span class="dot active"></span> Current</div>
+                <div class="legend-item"><span class="dot answered"></span> Answered</div>
+                <div class="legend-item"><span class="dot flagged"></span> Flagged</div>
+                <div class="legend-item"><span class="dot"></span> Not Visited</div>
+            </div>
+        </aside>
+
+        <!-- Main Question Area -->
+        <section class="question-area">
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-type">Multiple Choice</span>
+                    <button class="btn-icon flag-btn" title="Flag for review">
+                        <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                            <line x1="4" y1="22" x2="4" y2="15"></line>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="question-content">
+                    <h2 id="question-text">Which of the following is NOT a principle of Design?</h2>
+
+                    <!-- Dynamic Answer Area -->
+                    <div id="answer-area" class="answer-options">
+                        <label class="option">
+                            <input type="radio" name="answer" value="a">
+                            <span class="option-text">Balance</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="answer" value="b">
+                            <span class="option-text">Contrast</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="answer" value="c">
+                            <span class="option-text">Coding</span>
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="answer" value="d">
+                            <span class="option-text">Emphasis</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="question-footer">
+                    <button class="btn-secondary" id="prev-btn" disabled>Previous</button>
+                    <button class="btn-primary" id="next-btn">Next</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile Bottom Navigation (Exam Context) -->
+    <nav class="mobile-exam-nav">
+        <button class="mobile-nav-btn" id="mobile-prev">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M15 18l-6-6 6-6"></path>
+            </svg>
+            Prev
+        </button>
+        <button class="mobile-nav-btn" id="mobile-palette-toggle">
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Palette
+        </button>
+        <button class="mobile-nav-btn primary" id="mobile-next">
+            Next
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                <path d="M9 18l6-6-6-6"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
