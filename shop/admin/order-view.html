@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order #ORD-7829 - Shop Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="brand">
+            SimpleShop <span class="admin-badge">Admin</span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="products.html">Products</a>
+            <a href="categories.html">Categories</a>
+            <a href="orders.html" class="active">Orders</a>
+            <a href="customers.html">Customers</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+        <div class="user-profile">
+            <div class="avatar"></div>
+            <span>Admin</span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <div>
+                <div class="order-id-header">
+                    <h1 class="page-title">#ORD-7829</h1>
+                    <span class="status status-active">Processing</span>
+                </div>
+                <p class="page-subtitle">Placed on October 24, 2025 at 2:35 PM</p>
+            </div>
+            <div class="header-actions">
+                <a href="orders.html" class="btn btn-secondary">
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    Back to Orders
+                </a>
+                <button class="btn btn-secondary">
+                    <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+                    </svg>
+                    Print
+                </button>
+            </div>
+        </div>
+
+        <!-- Order Detail Layout -->
+        <div class="order-detail-layout">
+            <!-- Left Column: Items & Timeline -->
+            <div class="order-detail-main">
+                <!-- Order Items -->
+                <div class="detail-card">
+                    <div class="detail-card-header">
+                        <h3>Order Items</h3>
+                        <span class="item-count">3 items</span>
+                    </div>
+                    <div class="order-items-table">
+                        <div class="order-item">
+                            <div class="order-item-image">
+                                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div class="order-item-details">
+                                <div class="order-item-name">Premium Wireless Headphones</div>
+                                <div class="order-item-meta">SKU: WH-001 · Color: Black</div>
+                            </div>
+                            <div class="order-item-qty">× 1</div>
+                            <div class="order-item-price">$249.00</div>
+                        </div>
+                        <div class="order-item">
+                            <div class="order-item-image">
+                                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div class="order-item-details">
+                                <div class="order-item-name">Ceramic Coffee Mug</div>
+                                <div class="order-item-meta">SKU: CM-022 · Color: Sage Green</div>
+                            </div>
+                            <div class="order-item-qty">× 2</div>
+                            <div class="order-item-price">$36.00</div>
+                        </div>
+                    </div>
+                    <!-- Totals -->
+                    <div class="order-totals">
+                        <div class="order-total-row">
+                            <span>Subtotal</span>
+                            <span>$285.00</span>
+                        </div>
+                        <div class="order-total-row">
+                            <span>Shipping</span>
+                            <span>$12.00</span>
+                        </div>
+                        <div class="order-total-row">
+                            <span>Tax</span>
+                            <span>$28.00</span>
+                        </div>
+                        <div class="order-total-row">
+                            <span>Discount <span class="discount-code">WELCOME10</span></span>
+                            <span class="discount-amount">−$28.50</span>
+                        </div>
+                        <div class="order-total-row order-grand-total">
+                            <span>Total</span>
+                            <span>$296.50</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Timeline -->
+                <div class="detail-card">
+                    <div class="detail-card-header">
+                        <h3>Order Timeline</h3>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item timeline-active">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Processing</div>
+                                <div class="timeline-desc">Order is being prepared for shipment</div>
+                                <div class="timeline-time">Oct 24, 2025 · 3:00 PM</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-done">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Payment Confirmed</div>
+                                <div class="timeline-desc">Payment of $296.50 received via Visa ending in 4242</div>
+                                <div class="timeline-time">Oct 24, 2025 · 2:36 PM</div>
+                            </div>
+                        </div>
+                        <div class="timeline-item timeline-done">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-title">Order Placed</div>
+                                <div class="timeline-desc">Customer placed order #ORD-7829</div>
+                                <div class="timeline-time">Oct 24, 2025 · 2:35 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internal Notes -->
+                <div class="detail-card">
+                    <div class="detail-card-header">
+                        <h3>Notes</h3>
+                    </div>
+                    <div class="notes-section">
+                        <div class="note-item">
+                            <div class="note-avatar">A</div>
+                            <div class="note-content">
+                                <div class="note-header">
+                                    <span class="note-author">Admin</span>
+                                    <span class="note-time">Oct 24, 2025 · 3:15 PM</span>
+                                </div>
+                                <p class="note-text">Customer requested gift wrapping. Added to packing instructions.</p>
+                            </div>
+                        </div>
+                        <div class="note-input-area">
+                            <textarea class="form-textarea" style="min-height: 80px;" placeholder="Add a note about this order..."></textarea>
+                            <button class="btn btn-secondary" style="margin-top: 0.75rem;">Add Note</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <div class="order-detail-sidebar">
+                <!-- Update Status -->
+                <div class="detail-card">
+                    <div class="detail-card-header">
+                        <h3>Update Status</h3>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-select">
+                            <option value="pending">Pending</option>
+                            <option value="processing" selected>Processing</option>
+                            <option value="shipped">Shipped</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="cancelled">Cancelled</option>
+                            <option value="refunded">Refunded</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%;">Update Status</button>
+                </div>
+
+                <!-- Customer Info -->
+                <div class="detail-card">
+                    <div class="detail-card-header">
+                        <h3>Customer</h3>
+                    </div>
+                    <div class="customer-info">
+                        <div class="customer-avatar-row">
+                            <div class="customer-avatar">SJ</div>
+                            <div>
+                                <div class="customer-name">Sarah Johnson</div>
+                                <div class="customer-email">sarah.j@example.com</div>
+                            </div>
+                        </div>
+                        <div class="info-divider"></div>
+                        <div class="customer-stat-row">
+                            <span class="customer-stat-label">Total Orders</span>
+                            <span class="customer-stat-value">12</span>
+                        </div>
+                        <div class="customer-stat-row">
+                            <span class="customer-stat-label">Total Spent</span>
+                            <span class="customer-stat-value">$1,845.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shipping Address -->
+                <div class="detail-card">
+                    <div class="detail-card-header">
+                        <h3>Shipping Address</h3>
+                    </div>
+                    <div class="address-block">
+                        <p>Sarah Johnson</p>
+                        <p>123 Oak Street, Apt 4B</p>
+                        <p>Brooklyn, NY 11201</p>
+                        <p>United States</p>
+                        <p class="address-phone">+1 (555) 012-3456</p>
+                    </div>
+                </div>
+
+                <!-- Billing Address -->
+                <div class="detail-card">
+                    <div class="detail-card-header">
+                        <h3>Billing Address</h3>
+                    </div>
+                    <div class="address-block">
+                        <p>Sarah Johnson</p>
+                        <p>123 Oak Street, Apt 4B</p>
+                        <p>Brooklyn, NY 11201</p>
+                        <p>United States</p>
+                    </div>
+                </div>
+
+                <!-- Payment Info -->
+                <div class="detail-card">
+                    <div class="detail-card-header">
+                        <h3>Payment</h3>
+                    </div>
+                    <div class="payment-info">
+                        <div class="payment-method-row">
+                            <div class="payment-card-icon">
+                                <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="payment-method-name">Visa ending in 4242</div>
+                                <div class="payment-method-detail">Exp: 12/2027</div>
+                            </div>
+                        </div>
+                        <div class="info-divider"></div>
+                        <div class="customer-stat-row">
+                            <span class="customer-stat-label">Transaction ID</span>
+                            <span class="customer-stat-value" style="font-size: 0.8rem;">txn_1Hk2Jd...</span>
+                        </div>
+                        <div class="customer-stat-row">
+                            <span class="customer-stat-label">Payment Status</span>
+                            <span class="status status-active" style="font-size: 0.7rem;">Paid</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Nav -->
+    <div class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+            Home
+        </a>
+        <a href="products.html" class="mobile-nav-item">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+            </svg>
+            Products
+        </a>
+        <a href="orders.html" class="mobile-nav-item active">
+            <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            Orders
+        </a>
+        <a href="settings.html" class="mobile-nav-item">
+             <svg viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Settings
+        </a>
+    </div>
+</body>
+</html>
