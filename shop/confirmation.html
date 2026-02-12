@@ -26,36 +26,39 @@
         </nav>
     </header>
 
-    <main style="text-align: center; max-width: 600px; padding-top: 4rem;">
-        <div
-            style="width: 80px; height: 80px; background: var(--success); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem;">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
+    <main>
+        <div class="confirmation-container">
+            <div class="success-card">
+                <div class="success-icon-wrapper">
+                    <svg class="success-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                
+                <h1>Order Confirmed!</h1>
+                <p class="confirmation-message">Thank you for your purchase. Your order <span class="order-id">#29384</span> is being processed and will ship soon.</p>
+                
+                <div class="order-details-card">
+                    <h3>Order Summary</h3>
+                    <div class="order-items-list">
+                        <div class="order-item-row">
+                            <span class="item-name">Organic Linen Sofa (x1)</span>
+                            <span class="item-price">$1,250.00</span>
+                        </div>
+                        <div class="order-item-row">
+                            <span class="item-name">Ceramic Vase (x1)</span>
+                            <span class="item-price">$45.00</span>
+                        </div>
+                    </div>
+                    <div class="order-total-row">
+                        <span>Total Paid</span>
+                        <span>$1,295.00</span>
+                    </div>
+                </div>
+                
+                <a href="index.html" class="btn btn-primary btn-wide">Continue Shopping</a>
+            </div>
         </div>
-
-        <h1 style="margin-bottom: 1rem;">Order Confirmed!</h1>
-        <p style="color: var(--text-secondary); margin-bottom: 2rem;">Thank you for your purchase. Your order #29384 is
-            being processed and will ship soon.</p>
-
-        <div class="cart-summary" style="text-align: left; margin-bottom: 2rem;">
-            <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem;">Order Details</h3>
-            <div class="summary-row">
-                <span>Organic Linen Sofa (x1)</span>
-                <span>$1,250.00</span>
-            </div>
-            <div class="summary-row">
-                <span>Ceramic Vase (x1)</span>
-                <span>$45.00</span>
-            </div>
-            <div class="summary-total" style="font-size: 1rem;">
-                <span>Total Paid</span>
-                <span>$1,295.00</span>
-            </div>
-        </div>
-
-        <a href="index.html" class="btn btn-primary">Continue Shopping</a>
     </main>
 </body>
 
