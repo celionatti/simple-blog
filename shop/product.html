@@ -47,100 +47,88 @@
     <main>
         <div class="product-detail">
             <div class="product-gallery">
-                <div class="product-image-main">
-                    <span class="badge badge-new" style="top: 1.5rem; left: 1.5rem;">New Arrival</span>
+                <div class="product-image-main sticky-image">
+                    <span class="badge badge-new">New Arrival</span>
                     <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
                         alt="Organic Linen Sofa">
                 </div>
             </div>
 
-            <div class="product-meta-header">
-                <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
-                    <span class="price-badge">In Stock</span>
-                    <span class="price-badge eco">Eco-Friendly</span>
+            <div class="product-info-column">
+                <div class="product-meta-header">
+                    <div class="meta-badges">
+                        <span class="price-badge">In Stock</span>
+                        <span class="price-badge eco">Eco-Friendly</span>
+                    </div>
+                    <h1>Organic Linen Sofa</h1>
+                    <div class="product-rating-review">
+                        <div class="stars">
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" /></svg>
+                        </div>
+                        <span class="review-count">(128 Reviews)</span>
+                    </div>
+                    <span class="price-large">$1,250.00</span>
                 </div>
-                <h1>Organic Linen Sofa</h1>
-                <div class="product-rating" style="margin-bottom: 1rem;">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                    </svg>
-                    <span style="color: var(--text-tertiary); font-size: 0.85rem; margin-left: 0.5rem;">(128
-                        Reviews)</span>
-                </div>
-                <span class="price-large">$1,250.00</span>
-            </div>
 
-            <p style="margin-bottom: 2rem; color: var(--text-secondary);">
-                Handcrafted from ethically sourced solid oak and upholstered in premium 100% organic linen. This
-                sofa combines timeless minimalist design with unparalleled comfort. Perfect for creating a calm,
-                natural living space.
-            </p>
-
-            <div class="option-group">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                    <span class="option-label" style="margin-bottom: 0;">Color</span>
-                    <span id="selected-color-name"
-                        style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">Oatmeal</span>
-                </div>
-                <div class="color-swatches">
-                    <button class="color-swatch active" data-color="Oatmeal"
-                        style="background-color: oklch(92% 0.01 80);" aria-label="Oatmeal"></button>
-                    <button class="color-swatch" data-color="Charcoal" style="background-color: oklch(25% 0.01 250);"
-                        aria-label="Charcoal"></button>
-                    <button class="color-swatch" data-color="Sage" style="background-color: oklch(80% 0.04 160);"
-                        aria-label="Sage"></button>
-                </div>
-            </div>
-
-            <div class="option-group">
-                <span class="option-label">Quantity</span>
-                <div class="quantity-selector">
-                    <button class="quantity-btn">-</button>
-                    <input type="text" value="1" class="quantity-input">
-                    <button class="quantity-btn">+</button>
-                </div>
-            </div>
-
-            <button class="btn btn-primary btn-full" style="padding: 1rem; font-size: 1rem;">Add to Cart</button>
-
-            <div
-                style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color); font-size: 0.9rem; color: var(--text-tertiary);">
-                <p style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                        </path>
-                    </svg>
-                    Free shipping on orders over $500
+                <p class="product-description">
+                    Handcrafted from ethically sourced solid oak and upholstered in premium 100% organic linen. This
+                    sofa combines timeless minimalist design with unparalleled comfort. Perfect for creating a calm,
+                    natural living space.
                 </p>
-                <p style="display: flex; align-items: center; gap: 0.5rem;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path
-                            d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
-                        </path>
+
+                <div class="product-options">
+                    <div class="option-group">
+                        <div class="option-header">
+                            <span class="option-label">Color</span>
+                            <span id="selected-color-name" class="selected-value">Oatmeal</span>
+                        </div>
+                        <div class="color-swatches">
+                            <button class="color-swatch active" data-color="Oatmeal"
+                                style="background-color: oklch(92% 0.01 80);" aria-label="Select Oatmeal"></button>
+                            <button class="color-swatch" data-color="Charcoal" style="background-color: oklch(25% 0.01 250);"
+                                aria-label="Select Charcoal"></button>
+                            <button class="color-swatch" data-color="Sage" style="background-color: oklch(80% 0.04 160);"
+                                aria-label="Select Sage"></button>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <span class="option-label">Quantity</span>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn" aria-label="Decrease quantity">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input" aria-label="Quantity">
+                            <button class="quantity-btn" aria-label="Increase quantity">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-full add-to-cart-btn">
+                    <span>Add to Cart</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
                     </svg>
-                    Sustainably sourced materials
-                </p>
+                </button>
+
+                <div class="product-benefits">
+                    <div class="benefit-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        </svg>
+                        <span>Free shipping on orders over $500</span>
+                    </div>
+                    <div class="benefit-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                        </svg>
+                        <span>Sustainably sourced materials</span>
+                    </div>
+                </div>
             </div>
         </div>
         </div>
