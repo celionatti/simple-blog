@@ -102,8 +102,20 @@ header {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--accent);
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
 }
 
+.brand-label {
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-left: 0.5rem;
+    font-weight: 400;
+}
 /* Navigation Hover Effects */
 .nav-links {
     display: flex;
