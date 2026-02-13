@@ -160,11 +160,12 @@ header {
     left: -150%;
     width: 150%;
     height: 100%;
-    background: var(--text-primary);
+    background: linear-gradient(90deg, oklch(75% 0.15 145), oklch(75% 0.15 280));
     border-radius: 30px;
     transform: skewX(-15deg);
     transition: var(--transition-premium);
     z-index: -1;
+    animation: infiniteHue 10s linear infinite;
 }
 
 .nav-links a:hover {
@@ -176,16 +177,14 @@ header {
     left: -10%;
 }
 
-/* Individual Random Colors for Hover */
-.nav-links a:nth-child(1):hover::before { background: linear-gradient(90deg, oklch(65% 0.12 145), oklch(75% 0.15 145)); } /* Sage */
-.nav-links a:nth-child(2):hover::before { background: linear-gradient(90deg, oklch(80% 0.15 85), oklch(85% 0.2 85)); }  /* Gold */
-.nav-links a:nth-child(3):hover::before { background: linear-gradient(90deg, oklch(70% 0.15 280), oklch(75% 0.2 280)); } /* Lavender */
-.nav-links a:nth-child(4):hover::before { background: linear-gradient(90deg, oklch(65% 0.15 190), oklch(70% 0.2 190)); } /* Teal */
-.nav-links a:nth-child(5):hover::before { background: linear-gradient(90deg, oklch(70% 0.2 30), oklch(75% 0.25 30)); }  /* Terracotta */
-
 .nav-links a.active:hover {
     background: none;
     box-shadow: none;
+}
+
+@keyframes infiniteHue {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
 }
 
 .header-actions {
