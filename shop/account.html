@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Account - Serenity Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .account-container {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 3rem;
+        margin-top: 2rem;
+      }
+
+      .account-sidebar {
+        background: var(--bg-card);
+        border-radius: 20px;
+        padding: 2rem;
+        height: fit-content;
+        box-shadow: var(--shadow-md);
+      }
+
+      .user-profile-brief {
+        text-align: center;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .user-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: var(--bg-secondary);
+        margin: 0 auto 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      .user-name {
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 0.25rem;
+      }
+
+      .user-email {
+        font-size: 0.85rem;
+        color: var(--text-tertiary);
+      }
+
+      .account-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .account-nav-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.8rem 1.2rem;
+        border-radius: 12px;
+        color: var(--text-secondary);
+        font-weight: 500;
+        transition: var(--transition-base);
+      }
+
+      .account-nav-item:hover,
+      .account-nav-item.active {
+        background: var(--bg-secondary);
+        color: var(--accent);
+      }
+
+      .account-nav-item svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .account-content {
+        background: var(--bg-card);
+        border-radius: 20px;
+        padding: 2.5rem;
+        box-shadow: var(--shadow-md);
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      .content-header {
+        margin-bottom: 2.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .content-header h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .info-card {
+        padding: 1.5rem;
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
+        transition: var(--transition-base);
+      }
+
+      .info-card:hover {
+        border-color: var(--accent);
+        background: var(--bg-secondary);
+      }
+
+      .info-card-label {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--text-tertiary);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      .info-card-value {
+        font-weight: 500;
+        color: var(--text-primary);
+      }
+
+      .order-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .order-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+        border-radius: 16px;
+        border: 1px solid var(--border-color);
+        transition: var(--transition-base);
+      }
+
+      .order-item:hover {
+        transform: translateX(5px);
+        border-color: var(--accent);
+      }
+
+      .order-info {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+
+      .order-id {
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      .order-date {
+        font-size: 0.9rem;
+        color: var(--text-tertiary);
+      }
+
+      .order-status {
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .status-delivered {
+        background: oklch(95% 0.05 150);
+        color: oklch(45% 0.15 150);
+      }
+
+      .status-processing {
+        background: oklch(95% 0.05 85);
+        color: oklch(55% 0.15 85);
+      }
+
+      @media (max-width: 992px) {
+        .account-container {
+          grid-template-columns: 1fr;
+        }
+
+        .account-sidebar {
+          height: auto;
+        }
+
+        .account-nav {
+          flex-direction: row;
+          overflow-x: auto;
+          padding-bottom: 0.5rem;
+        }
+
+        .account-nav-item {
+          flex-shrink: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="brand">
+        Serenity
+        <span
+          style="
+            font-family: &quot;Inter&quot;, sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-primary);
+            margin-left: 0.5rem;
+            font-weight: 400;
+          "
+          >Shop</span
+        >
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Home</a>
+        <a href="#">Journal</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-icon" id="search-trigger" aria-label="Search">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="cart.html" class="cart-icon">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count">2</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="account-container">
+        <aside class="account-sidebar">
+          <div class="user-profile-brief">
+            <div class="user-avatar">JD</div>
+            <div class="user-name">John Doe</div>
+            <div class="user-email">john.doe@example.com</div>
+          </div>
+          <nav class="account-nav">
+            <a href="account.html" class="account-nav-item active">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              Profile Info
+            </a>
+            <a href="#" class="account-nav-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                ></path>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+              </svg>
+              My Orders
+            </a>
+            <a href="#" class="account-nav-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                ></path>
+              </svg>
+              Messages
+            </a>
+            <a href="#" class="account-nav-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                ></path>
+              </svg>
+              Settings
+            </a>
+            <a
+              href="auth/login.html"
+              class="account-nav-item"
+              style="margin-top: 2rem; color: #e26d5c"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+              </svg>
+              Logout
+            </a>
+          </nav>
+        </aside>
+
+        <section class="account-content">
+          <div class="content-header">
+            <h2>Profile Information</h2>
+            <button
+              class="btn btn-primary"
+              style="padding: 0.6rem 1.2rem; font-size: 0.8rem"
+            >
+              Edit Profile
+            </button>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-card-label">Full Name</div>
+              <div class="info-card-value">John Doe</div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-label">Email Address</div>
+              <div class="info-card-value">john.doe@example.com</div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-label">Phone Number</div>
+              <div class="info-card-value">+1 (555) 000-0000</div>
+            </div>
+            <div class="info-card">
+              <div class="info-card-label">Member Since</div>
+              <div class="info-card-value">January 2024</div>
+            </div>
+          </div>
+
+          <div class="content-header" style="margin-top: 4rem">
+            <h2>Recent Orders</h2>
+            <a
+              href="#"
+              style="color: var(--accent); font-weight: 500; font-size: 0.9rem"
+              >View All</a
+            >
+          </div>
+
+          <div class="order-list">
+            <div class="order-item">
+              <div class="order-info">
+                <div class="order-id">#ORD-7742</div>
+                <div class="order-date">Feb 10, 2026</div>
+              </div>
+              <div style="font-weight: 600">$1,450.00</div>
+              <span class="order-status status-delivered">Delivered</span>
+            </div>
+            <div class="order-item">
+              <div class="order-info">
+                <div class="order-id">#ORD-6621</div>
+                <div class="order-date">Jan 25, 2026</div>
+              </div>
+              <div style="font-weight: 600">$85.00</div>
+              <span class="order-status status-delivered">Delivered</span>
+            </div>
+            <div class="order-item">
+              <div class="order-info">
+                <div class="order-id">#ORD-8932</div>
+                <div class="order-date">Dec 12, 2025</div>
+              </div>
+              <div style="font-weight: 600">$45.00</div>
+              <span class="order-status status-delivered">Delivered</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+      <a href="index.html" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Shop</span>
+      </a>
+      <a href="#" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span>Search</span>
+      </a>
+      <a href="cart.html" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span>Cart</span>
+      </a>
+      <a href="account.html" class="mobile-nav-item active">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span>Account</span>
+      </a>
+    </nav>
+  </body>
+</html>
