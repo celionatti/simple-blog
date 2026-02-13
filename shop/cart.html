@@ -55,7 +55,7 @@
             <h1>Shopping Cart</h1>
         </div>
 
-        <div class="cart-layout">
+        <form action="update-cart.php" method="POST" class="cart-layout">
             <div class="cart-items">
                 <!-- Item 1 -->
                 <div class="cart-item">
@@ -72,11 +72,11 @@
                         
                         <div class="cart-item-actions">
                             <div class="quantity-selector small">
-                                <button class="quantity-btn" aria-label="Decrease quantity">-</button>
-                                <input type="number" value="1" min="1" class="quantity-input" aria-label="Quantity">
-                                <button class="quantity-btn" aria-label="Increase quantity">+</button>
+                                <button type="button" class="quantity-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" name="qty[1]" value="1" min="1" class="quantity-input" aria-label="Quantity">
+                                <button type="button" class="quantity-btn" aria-label="Increase quantity">+</button>
                             </div>
-                            <button class="remove-item-btn">
+                            <button type="button" class="remove-item-btn">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="3 6 5 6 21 6"></polyline>
                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -102,11 +102,11 @@
                         
                         <div class="cart-item-actions">
                             <div class="quantity-selector small">
-                                <button class="quantity-btn" aria-label="Decrease quantity">-</button>
-                                <input type="number" value="1" min="1" class="quantity-input" aria-label="Quantity">
-                                <button class="quantity-btn" aria-label="Increase quantity">+</button>
+                                <button type="button" class="quantity-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" name="qty[2]" value="1" min="1" class="quantity-input" aria-label="Quantity">
+                                <button type="button" class="quantity-btn" aria-label="Increase quantity">+</button>
                             </div>
-                            <button class="remove-item-btn">
+                            <button type="button" class="remove-item-btn">
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="3 6 5 6 21 6"></polyline>
                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -142,7 +142,11 @@
                         <span>$1,295.00</span>
                     </div>
 
-                    <a href="checkout.html" class="btn btn-primary btn-full checkout-btn">
+                    <button type="submit" class="btn btn-primary btn-full update-btn" style="margin-bottom: 1rem;">
+                        Update Cart
+                    </button>
+
+                    <a href="checkout.html" class="btn btn-outline btn-full" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
                         Proceed to Checkout
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -159,7 +163,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </main>
 
     <!-- Mobile Bottom Navigation -->

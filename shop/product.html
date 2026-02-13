@@ -86,40 +86,45 @@
                     natural living space.
                 </p>
 
-                <div class="product-options">
-                    <div class="option-group">
-                        <div class="option-header">
-                            <span class="option-label">Color</span>
-                            <span id="selected-color-name" class="selected-value">Oatmeal</span>
+                <form action="cart.php" method="POST" class="product-form">
+                    <input type="hidden" name="product_id" value="1">
+                    <input type="hidden" name="color" id="product-color" value="Oatmeal">
+                    
+                    <div class="product-options">
+                        <div class="option-group">
+                            <div class="option-header">
+                                <span class="option-label">Color</span>
+                                <span id="selected-color-name" class="selected-value">Oatmeal</span>
+                            </div>
+                            <div class="color-swatches">
+                                <button type="button" class="color-swatch active" data-color="Oatmeal"
+                                    style="background-color: oklch(92% 0.01 80);" aria-label="Select Oatmeal"></button>
+                                <button type="button" class="color-swatch" data-color="Charcoal" style="background-color: oklch(25% 0.01 250);"
+                                    aria-label="Select Charcoal"></button>
+                                <button type="button" class="color-swatch" data-color="Sage" style="background-color: oklch(80% 0.04 160);"
+                                    aria-label="Select Sage"></button>
+                            </div>
                         </div>
-                        <div class="color-swatches">
-                            <button class="color-swatch active" data-color="Oatmeal"
-                                style="background-color: oklch(92% 0.01 80);" aria-label="Select Oatmeal"></button>
-                            <button class="color-swatch" data-color="Charcoal" style="background-color: oklch(25% 0.01 250);"
-                                aria-label="Select Charcoal"></button>
-                            <button class="color-swatch" data-color="Sage" style="background-color: oklch(80% 0.04 160);"
-                                aria-label="Select Sage"></button>
+
+                        <div class="option-group">
+                            <span class="option-label">Quantity</span>
+                            <div class="quantity-selector">
+                                <button type="button" class="quantity-btn" aria-label="Decrease quantity">-</button>
+                                <input type="number" name="quantity" value="1" min="1" class="quantity-input" aria-label="Quantity">
+                                <button type="button" class="quantity-btn" aria-label="Increase quantity">+</button>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="option-group">
-                        <span class="option-label">Quantity</span>
-                        <div class="quantity-selector">
-                            <button class="quantity-btn" aria-label="Decrease quantity">-</button>
-                            <input type="number" value="1" min="1" class="quantity-input" aria-label="Quantity">
-                            <button class="quantity-btn" aria-label="Increase quantity">+</button>
-                        </div>
-                    </div>
-                </div>
-
-                <button class="btn btn-primary btn-full add-to-cart-btn">
-                    <span>Add to Cart</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                    </svg>
-                </button>
+                    <button type="submit" class="btn btn-primary btn-full add-to-cart-btn">
+                        <span>Add to Cart</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </button>
+                </form>
 
                 <div class="product-benefits">
                     <div class="benefit-item">

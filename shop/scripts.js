@@ -117,6 +117,12 @@ document.addEventListener("DOMContentLoaded", () => {
           colorNameDisplay.textContent = swatch.getAttribute("data-color");
         }
 
+        // Sync with hidden input for PHP
+        const hiddenColorInput = document.getElementById("product-color");
+        if (hiddenColorInput) {
+          hiddenColorInput.value = swatch.getAttribute("data-color");
+        }
+
         // If there's a main image to update (mock logic)
         const mainImg = document.querySelector(".product-image-main img");
         if (mainImg && swatch.dataset.img) {
