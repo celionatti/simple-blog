@@ -105,8 +105,31 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- Product Gallery / Color Swatch Selection ---
+  const thumbnails = document.querySelectorAll(".thumbnail");
+  const mainProductImage = document.getElementById("main-product-image");
   const swatches = document.querySelectorAll(".color-swatch");
   const colorNameDisplay = document.getElementById("selected-color-name");
+
+  // Thumbnail switching logic
+  if (thumbnails.length > 0 && mainProductImage) {
+    thumbnails.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        // Update active state
+        thumbnails.forEach((t) => t.classList.remove("active"));
+        thumb.classList.add("active");
+
+        // Change main image with a smooth fade-in effect
+        const newSrc = thumb.getAttribute("data-full-img");
+        if (newSrc && mainProductImage.src !== newSrc) {
+          mainProductImage.style.opacity = "0";
+          setTimeout(() => {
+            mainProductImage.src = newSrc;
+            mainProductImage.style.opacity = "1";
+          }, 200);
+        }
+      });
+    });
+  }
 
   if (swatches.length > 0) {
     swatches.forEach((swatch) => {
@@ -124,9 +147,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         // If there's a main image to update (mock logic)
-        const mainImg = document.querySelector(".product-image-main img");
-        if (mainImg && swatch.dataset.img) {
-          mainImg.src = swatch.dataset.img;
+        if (mainProductImage && swatch.dataset.img) {
+          mainProductImage.src = swatch.dataset.img;
         }
       });
     });
