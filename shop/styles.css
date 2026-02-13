@@ -2102,39 +2102,46 @@ main {
     }
 }
 
-/* Account Page Styles */
+
+
+/* Account Page Styles - Zero-Overflow Vertical Architecture */
+
+/* 1. Base Vertical Styles (Mobile & Tablet) */
 .account-container {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 3rem;
-    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    max-width: 100%;
+    overflow: visible;
 }
 
 .account-sidebar {
     background: var(--bg-card);
     border-radius: 20px;
-    padding: 2rem;
-    height: fit-content;
+    padding: 1.5rem;
     box-shadow: var(--shadow-md);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .user-profile-brief {
     text-align: center;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
     border-bottom: 1px solid var(--border-color);
 }
 
 .user-avatar {
-    width: 80px;
-    height: 80px;
+    width: 72px;
+    height: 72px;
     border-radius: 50%;
     background: var(--bg-secondary);
     margin: 0 auto 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: var(--accent);
     font-weight: 600;
 }
@@ -2143,6 +2150,7 @@ main {
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 0.25rem;
+    font-size: 1.15rem;
 }
 
 .user-email {
@@ -2152,8 +2160,9 @@ main {
 
 .account-nav {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Strictly vertical */
     gap: 0.5rem;
+    width: 100%;
 }
 
 .account-nav-item {
@@ -2165,6 +2174,9 @@ main {
     color: var(--text-secondary);
     font-weight: 500;
     transition: var(--transition-base);
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .account-nav-item:hover,
@@ -2181,13 +2193,15 @@ main {
 .account-content {
     background: var(--bg-card);
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 1.5rem;
     box-shadow: var(--shadow-md);
+    width: 100%;
+    box-sizing: border-box;
     animation: fadeInUp 0.8s var(--ease-premium) backwards;
 }
 
 .content-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2196,78 +2210,83 @@ main {
 }
 
 .content-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.5px;
 }
 
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: 100%;
 }
 
 .info-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
     border-radius: 16px;
     border: 1px solid var(--border-color);
     transition: var(--transition-base);
 }
 
-.info-card:hover {
-    border-color: var(--accent);
-    background: var(--bg-secondary);
-}
-
 .info-card-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-tertiary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     font-weight: 600;
 }
 
 .info-card-value {
     font-weight: 500;
     color: var(--text-primary);
+    font-size: 1rem;
+    word-break: break-all; /* Prevent long email overflow */
 }
 
 .order-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 
 .order-item {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem;
+    flex-direction: column;
+    padding: 1.25rem;
     border-radius: 16px;
     border: 1px solid var(--border-color);
+    gap: 1rem;
     transition: var(--transition-base);
-}
-
-.order-item:hover {
-    transform: translateX(5px);
-    border-color: var(--accent);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .order-info {
     display: flex;
-    gap: 1.5rem;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .order-id {
     font-weight: 600;
     color: var(--text-primary);
+    font-size: 1rem;
 }
 
 .order-date {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-tertiary);
+}
+
+.order-meta-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
 }
 
 .order-status {
@@ -2283,79 +2302,57 @@ main {
     color: oklch(45% 0.15 150);
 }
 
-.status-processing {
-    background: oklch(95% 0.05 85);
-    color: oklch(55% 0.15 85);
-}
-
-/* Responsiveness for Account Page */
-@media (max-width: 1024px) {
+/* 2. Tablet Scaling Enhancements (min-width: 768px) */
+@media (min-width: 768px) {
     .account-container {
-        grid-template-columns: 240px 1fr;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .account-container {
-        grid-template-columns: 1fr;
+        margin-top: 2.5rem;
+        gap: 3rem;
     }
 
-    .account-sidebar {
-        height: auto;
-    }
-
-    .account-nav {
-        flex-direction: row;
-        overflow-x: auto;
-        padding-bottom: 1rem;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        gap: 0.5rem;
-    }
-
-    .account-nav::-webkit-scrollbar {
-        display: none;
-    }
-
-    .account-nav-item {
-        flex-shrink: 0;
-        white-space: nowrap;
-    }
-}
-
-@media (max-width: 768px) {
-    .account-content {
-        padding: 1.5rem;
+    .account-sidebar, .account-content {
+        padding: 2.5rem;
     }
 
     .info-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 
     .order-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    .order-item > div:nth-child(2) {
-        width: 100%;
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-}
-
-@media (max-width: 480px) {
-    .content-header h2 {
-        font-size: 1.5rem;
-    }
 
     .order-info {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.1rem;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .order-meta-mobile {
+        width: auto;
+        border-top: none;
+        padding-top: 0;
+        gap: 2.5rem;
+    }
+}
+
+/* 3. Desktop Sidebar Grid (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .account-container {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        align-items: start;
+        gap: 3.5rem;
+    }
+
+    .account-sidebar {
+        position: sticky;
+        top: 2rem;
+    }
+
+    .order-item:hover {
+        transform: translateX(8px);
+        border-color: var(--accent);
     }
 }
