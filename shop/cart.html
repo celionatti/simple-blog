@@ -214,49 +214,7 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const searchOverlay = document.getElementById('search-overlay');
-            const searchInput = document.getElementById('search-input');
-            const searchTriggers = [
-                document.getElementById('search-trigger'),
-                document.getElementById('mobile-search-trigger')
-            ];
-            const closeSearch = document.getElementById('close-search');
-
-            searchTriggers.forEach(trigger => {
-                if (trigger) {
-                    trigger.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        searchOverlay.classList.add('active');
-                        document.body.classList.add('search-open');
-                        setTimeout(() => searchInput.focus(), 300);
-                    });
-                }
-            });
-
-            const closeSearchOverlay = () => {
-                searchOverlay.classList.remove('active');
-                document.body.classList.remove('search-open');
-            };
-
-            closeSearch.addEventListener('click', closeSearchOverlay);
-
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') closeSearchOverlay();
-            });
-
-            // Redirect to index with search query
-            searchInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    const query = e.target.value.trim();
-                    if (query) {
-                        window.location.href = `index.html?search=${encodeURIComponent(query)}`;
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
