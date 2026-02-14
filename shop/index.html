@@ -21,8 +21,8 @@
       </div>
       <nav class="nav-links">
         <a href="index.html" class="active">Shop</a>
+        <a href="products.html">Collections</a>
         <a href="#">New Arrivals</a>
-        <a href="#">Home</a>
         <a href="#">Journal</a>
       </nav>
       <div class="header-actions">
@@ -91,12 +91,38 @@
     </div>
 
     <main id="collection">
-      <div class="filters">
-        <div class="filter-link active">All</div>
-        <div class="filter-link">Home Decor</div>
-        <div class="filter-link">Furniture</div>
-        <div class="filter-link">Lighting</div>
-        <div class="filter-link">Textiles</div>
+      <div class="sticky-filters-bar">
+        <div class="filter-controls">
+          <button class="filter-drawer-trigger" id="filter-trigger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="21" x2="4" y2="14"></line>
+              <line x1="4" y1="10" x2="4" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="3"></line>
+              <line x1="20" y1="21" x2="20" y2="16"></line>
+              <line x1="20" y1="12" x2="20" y2="3"></line>
+              <line x1="1" y1="14" x2="7" y2="14"></line>
+              <line x1="9" y1="8" x2="15" y2="8"></line>
+              <line x1="17" y1="16" x2="23" y2="16"></line>
+            </svg>
+            <span>Filters</span>
+          </button>
+          <div class="desktop-filters">
+            <button class="filter-chip active">All</button>
+            <button class="filter-chip">Home Decor</button>
+            <button class="filter-chip">Furniture</button>
+            <button class="filter-chip">Lighting</button>
+            <button class="filter-chip">Textiles</button>
+          </div>
+        </div>
+        <div class="sort-selector">
+          <select aria-label="Sort products">
+            <option>Featured</option>
+            <option>Newest</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+        </div>
       </div>
 
       <div class="product-grid">
@@ -458,6 +484,15 @@
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
         <span>Search</span>
+      </a>
+      <a href="products.html" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>Collections</span>
       </a>
       <a href="cart.html" class="mobile-nav-item">
         <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">

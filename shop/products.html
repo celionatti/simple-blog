@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Collections - Serenity Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="brand">
+        Serenity
+        <span class="brand-label">Shop</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="products.html" class="active">Collections</a>
+        <a href="#">New Arrivals</a>
+        <a href="#">Journal</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-icon" id="search-trigger" aria-label="Search">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="cart.html" class="cart-icon">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count">2</span>
+        </a>
+        <a href="account.html" class="search-icon" title="Account">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <div class="page-banner">
+      <div class="banner-content">
+        <h1>Collections</h1>
+        <p>Explore our consciously crafted essentials.</p>
+      </div>
+    </div>
+
+    <main id="collection">
+      <div class="sticky-filters-bar">
+        <div class="filter-controls">
+          <button class="filter-drawer-trigger" id="filter-trigger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="21" x2="4" y2="14"></line>
+              <line x1="4" y1="10" x2="4" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12" y2="3"></line>
+              <line x1="20" y1="21" x2="20" y2="16"></line>
+              <line x1="20" y1="12" x2="20" y2="3"></line>
+              <line x1="1" y1="14" x2="7" y2="14"></line>
+              <line x1="9" y1="8" x2="15" y2="8"></line>
+              <line x1="17" y1="16" x2="23" y2="16"></line>
+            </svg>
+            <span>Filters</span>
+          </button>
+          <div class="desktop-filters">
+            <button class="filter-chip active">All</button>
+            <button class="filter-chip">Home Decor</button>
+            <button class="filter-chip">Furniture</button>
+            <button class="filter-chip">Lighting</button>
+            <button class="filter-chip">Textiles</button>
+          </div>
+        </div>
+        <div class="sort-selector">
+          <select aria-label="Sort products">
+            <option>Featured</option>
+            <option>Newest</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div
+          class="product-card"
+          onclick="window.location.href = 'product.html'"
+        >
+          <span class="badge badge-new">New</span>
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1540932296774-3ed6d53eb423?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80"
+              alt="Linen Sofa"
+              class="product-image"
+            />
+            <div class="product-overlay"></div>
+            <div class="quick-actions">
+              <button class="action-btn" title="Add to Wishlist">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l9.81-9.81 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                  ></path>
+                </svg>
+              </button>
+              <button class="action-btn" title="Quick Add">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+                  ></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <h3>Organic Linen Sofa</h3>
+            <div class="product-price">$1,250</div>
+          </div>
+        </div>
+
+        <!-- More products would follow here -->
+        <!-- Product 2 -->
+        <div
+          class="product-card"
+          onclick="window.location.href = 'product.html'"
+        >
+          <div class="product-image-container">
+            <img
+              src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+              alt="Ceramic Vase"
+              class="product-image"
+            />
+            <div class="product-overlay"></div>
+            <div class="quick-actions">
+              <button class="action-btn" title="Add to Wishlist">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l9.81-9.81 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </button>
+              <button class="action-btn" title="Quick Add">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+              </button>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-rating">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24" style="fill: var(--text-tertiary)"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <h3>Handmade Ceramic Vase</h3>
+            <div class="product-price">$45</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button disabled>Previous</button>
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <span class="dots">...</span>
+        <button>Next</button>
+      </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+      <a href="index.html" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Shop</span>
+      </a>
+      <a href="products.html" class="mobile-nav-item active">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>All</span>
+      </a>
+      <a href="cart.html" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <span>Cart</span>
+      </a>
+      <a href="account.html" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span>Account</span>
+      </a>
+    </nav>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <span class="footer-brand">Serenity</span>
+          <span class="footer-copyright">&copy; 2026. Consciously Crafted.</span>
+        </div>
+        <nav class="footer-links">
+          <a href="#" class="footer-link">Sustainability</a>
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+      <div class="search-header">
+        <button class="close-search" id="close-search" aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="search-content">
+        <div class="search-input-wrapper">
+          <input type="text" class="search-field" id="search-input" placeholder="What are you looking for?" autocomplete="off" />
+        </div>
+        <div class="search-results-info" id="search-info">
+          Showing results for "<span id="search-query"></span>"
+        </div>
+        <div class="search-results-grid" id="search-results"></div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

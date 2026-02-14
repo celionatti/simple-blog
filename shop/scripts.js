@@ -154,6 +154,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // --- Products Collection Filter Logic ---
+  const filterChips = document.querySelectorAll(".filter-chip");
+  const filterTrigger = document.getElementById("filter-trigger");
+
+  if (filterChips.length > 0) {
+    filterChips.forEach((chip) => {
+      chip.addEventListener("click", () => {
+        filterChips.forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        
+        // Mobile behavior: if there was a drawer, we'd close it here
+        console.log("Filtering by:", chip.textContent);
+      });
+    });
+  }
+
+  if (filterTrigger) {
+    filterTrigger.addEventListener("click", () => {
+      // Placeholder for modern filter drawer logic
+      alert("Filter drawer coming soon in PHP integration!");
+    });
+  }
+
   // --- Quantity Selector Logic (Used in Product and Cart) ---
   const quantitySelectors = document.querySelectorAll(".quantity-selector");
   quantitySelectors.forEach((selector) => {
