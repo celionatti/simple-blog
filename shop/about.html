@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us & Contact - Serenity Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="brand">
+        Serenity
+        <span class="brand-label">Shop</span>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Shop</a>
+        <a href="products.html">Collections</a>
+        <a href="about.html" class="active">About</a>
+        <a href="#">Journal</a>
+      </nav>
+      <div class="header-actions">
+        <button class="search-icon" id="search-trigger" aria-label="Search">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="cart.html" class="cart-icon">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count">2</span>
+        </a>
+        <a href="account.html" class="search-icon" title="Account">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main class="about-page">
+      <!-- Hero Section -->
+      <section class="about-hero">
+        <div class="container">
+          <h1 class="fade-in-up">Consciously Crafted <br><span>Lifestyle Essentials</span></h1>
+          <p class="fade-in-up delay-1">We believe in the beauty of simplicity and the power of mindful living.</p>
+        </div>
+      </section>
+
+      <!-- Story Section -->
+      <section class="about-story">
+        <div class="container">
+          <div class="story-grid">
+            <div class="story-image fade-in-left">
+              <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1167&q=80" alt="Mindful Living">
+            </div>
+            <div class="story-content fade-in-right">
+              <span class="subtitle">Our Story</span>
+              <h2>Born from a desire for <span>serenity</span>.</h2>
+              <p>Founded in 2024, Serenity Shop emerged from a simple observation: our homes should be our sanctuaries. In a world that's increasingly loud and fast, we curated a collection that invites pause, reflection, and peace.</p>
+              <p>Every piece in our shop is selected not just for its aesthetic appeal, but for its story, its craftsmanship, and its ability to bring a sense of calm to your daily rituals.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="about-values">
+        <div class="container">
+          <div class="section-header">
+            <span class="subtitle">Our Values</span>
+            <h2>Principles we live by.</h2>
+          </div>
+          <div class="values-grid">
+            <div class="value-card fade-in-up">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>Conscious Quality</h3>
+              <p>We prioritize materials that are kind to the earth and built to last generations.</p>
+            </div>
+            <div class="value-card fade-in-up delay-1">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </div>
+              <h3>Human Connection</h3>
+              <p>Supporting independent artisans and fostering a global community of makers.</p>
+            </div>
+            <div class="value-card fade-in-up delay-2">
+              <div class="value-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l9.81-9.81 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <h3>Mindful Consumption</h3>
+              <p>Curation over collection. We believe in having fewer, better things.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info fade-in-left">
+              <span class="subtitle">Get in Touch</span>
+              <h2>We'd love to <span>hear from you</span>.</h2>
+              <p>Whether you have a question about our products, a partnership idea, or just want to say hello, our door is always open.</p>
+              
+              <div class="contact-details">
+                <div class="contact-detail-item">
+                  <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div class="text">
+                    <label>Email Us</label>
+                    <a href="mailto:hello@serenityshop.com">hello@serenityshop.com</a>
+                  </div>
+                </div>
+                <div class="contact-detail-item">
+                  <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div class="text">
+                    <label>Visit Studio</label>
+                    <p>123 Calm Street, Serene Valley <br>CA 94043, United States</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-wrapper fade-in-right">
+              <form class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="John Doe" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="john@example.com" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject</label>
+                  <select id="subject">
+                    <option>Product Inquiry</option>
+                    <option>Shipping & Returns</option>
+                    <option>Partnership</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Your Message</label>
+                  <textarea id="message" rows="5" placeholder="How can we help?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-wide">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="mobile-bottom-nav">
+      <a href="index.html" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Shop</span>
+      </a>
+      <a href="products.html" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7"></rect>
+          <rect x="14" y="3" width="7" height="7"></rect>
+          <rect x="14" y="14" width="7" height="7"></rect>
+          <rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>All</span>
+      </a>
+      <a href="about.html" class="mobile-nav-item active">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <span>About</span>
+      </a>
+      <a href="account.html" class="mobile-nav-item">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span>Account</span>
+      </a>
+    </nav>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <span class="footer-brand">Serenity</span>
+          <span class="footer-copyright">&copy; 2026. Consciously Crafted.</span>
+        </div>
+        <nav class="footer-links">
+          <a href="#" class="footer-link">Sustainability</a>
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Terms</a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+      <div class="search-header">
+        <button class="close-search" id="close-search" aria-label="Close search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="search-content">
+        <div class="search-input-wrapper">
+          <input type="text" class="search-field" id="search-input" placeholder="What are you looking for?" autocomplete="off" />
+        </div>
+        <div class="search-results-info" id="search-info">
+          Showing results for "<span id="search-query"></span>"
+        </div>
+        <div class="search-results-grid" id="search-results"></div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
