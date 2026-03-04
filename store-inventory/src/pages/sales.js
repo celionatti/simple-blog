@@ -184,10 +184,10 @@ export function renderSales(container) {
                 <tr>
                   <td><strong>${escapeHtml(s.productName || '—')}</strong></td>
                   <td>${s.quantity}</td>
-                  <td>${formatCurrency(s.unitPrice)}</td>
+                  <td class="hide-mobile">${formatCurrency(s.unitPrice)}</td>
                   <td class="font-bold">${formatCurrency(s.totalAmount)}</td>
-                  <td class="text-success">${formatCurrency(s.profit)}</td>
-                  <td class="text-muted text-sm">${formatDateTime(s.createdAt)}</td>
+                  <td class="text-success font-bold hide-mobile">${formatCurrency(s.profit)}</td>
+                  <td class="text-muted text-sm hide-mobile">${formatDateTime(s.createdAt)}</td>
                 </tr>
               `).join('')}
             </tbody>

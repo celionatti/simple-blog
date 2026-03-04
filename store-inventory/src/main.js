@@ -3,6 +3,7 @@
  */
 import { Router } from './router.js';
 import { renderSidebar } from './components/sidebar.js';
+import { renderBottomNav } from './components/bottomNav.js'; // Added import
 import { renderDashboard } from './pages/dashboard.js';
 import { renderProducts } from './pages/products.js';
 import { renderAddProduct } from './pages/addProduct.js';
@@ -15,8 +16,9 @@ import { renderScanner } from './pages/scanner.js';
 const defaultStyle = document.querySelector('link[href*="style.css"][href*="src"]');
 if (defaultStyle) defaultStyle.remove();
 
-// Initialize sidebar
+// Initialize sidebar and bottom navigation
 renderSidebar();
+renderBottomNav(); // Added call
 
 // Initialize router
 const router = new Router([

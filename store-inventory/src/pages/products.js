@@ -75,9 +75,9 @@ export function renderProducts(container) {
             <tr>
               <th>Product</th>
               <th>SKU</th>
-              <th>Category</th>
-              <th>Cost</th>
-              <th>Price</th>
+              <th class="hide-mobile">Category</th>
+              <th class="hide-mobile">Cost</th>
+              <th class="hide-mobile">Price</th>
               <th>Stock</th>
               <th>Status</th>
               <th>Actions</th>
@@ -88,9 +88,9 @@ export function renderProducts(container) {
               <tr>
                 <td><strong>${escapeHtml(p.name)}</strong></td>
                 <td class="text-muted text-sm">${escapeHtml(p.sku)}</td>
-                <td>${escapeHtml(p.category || '—')}</td>
-                <td>${formatCurrency(p.costPrice)}</td>
-                <td>${formatCurrency(p.sellingPrice)}</td>
+                <td class="hide-mobile">${escapeHtml(p.category || '—')}</td>
+                <td class="hide-mobile">${formatCurrency(p.costPrice)}</td>
+                <td class="hide-mobile">${formatCurrency(p.sellingPrice)}</td>
                 <td>${p.quantity}</td>
                 <td>${getStockBadge(p.quantity, p.reorderLevel)}</td>
                 <td>
